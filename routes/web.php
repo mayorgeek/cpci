@@ -23,3 +23,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contactpage');
+
+Route::get('/next-steps', function () {
+    return view('next-steps');
+})->name('nextstepspage');

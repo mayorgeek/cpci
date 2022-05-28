@@ -11,7 +11,7 @@ Contact - Christ Preachers Church International
     <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover" style="
     background-image: url('{{ asset('images/contact-page-hero-image.jpg') }}');
     height: 658px;
-  ">
+    ">
         <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
             style="background-color: rgba(43, 41, 41, 0.37);">
             <div class="flex justify-center items-center h-full">
@@ -34,9 +34,10 @@ Contact - Christ Preachers Church International
     </div>
     <!-- End Of Hero Section -->
 
+
     {{-- Info Card Section --}}
     <div
-        class="bg-[#1E85FF] py-20 shadow-2xl w-[1240px] h-[597px] flex flex-col justify-center items-center mt-20 mx-auto">
+        class="bg-[#1E85FF] py-20 shadow-2xl w-[1240px] h-[597px] flex flex-col justify-center items-center mt-24 mx-auto">
         <h3 class="text-white text-center opacity-95 font-light text-base uppercase">Get In Touch</h3>
         <h1 class="text-white text-center font-light text-4xl capitalize mt-6">Contact & Visiting Info</h1>
         <div class="flex justify-center space-x-28 mt-12">
@@ -59,21 +60,56 @@ Contact - Christ Preachers Church International
         </div>
     </div>
 
+
     {{-- Cards Section --}}
-    {{-- <div class="h-[320px] w-[310px]" style="background-image: url('{{ asset('images/our-blog.jpg') }}'),
-    linear-gradient(rgba(30, 133, 255, 0.58), rgba(30, 133, 255, 0.58));">
-    <h2 class="text-white font-light text-xl capitalize">Our Blog</h2>
-    </div> --}}
-    <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover" style="
+    <div class="p-20 mt-10 grid grid-cols-4">
+        <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
         background-image: url('{{ asset('images/our-blog.jpg') }}');
         height: 320px;
         width: 310px;
-    ">
-        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed flex justify-center items-center"
-            style="background-color: rgba(30, 133, 255, 0.58)">
-            <h2 class="text-white font-light text-xl capitalize">Our Blog</h2>
+        ">
+            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed flex justify-center items-center"
+                style="background-color: rgba(30, 133, 255, 0.58)">
+                <h2 class="text-white font-light text-xl capitalize">Our Blog</h2>
+            </div>
+
         </div>
+
+        <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
+        background-image: url('{{ asset('images/live-stream.jpg') }}');
+        height: 320px;
+        width: 310px;
+        ">
+            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed flex justify-center items-center"
+                style="background-color: rgba(80, 74, 74, 0.48)">
+                <h2 class="text-white font-light text-xl capitalize">Live Stream</h2>
+            </div>
+
+        </div>
+
+        <div class="bg-white p-12 flex justify-center items-center text-center overflow-hidden shadow-xl" style="
+        height: 320px;
+        width: 310px;
+        ">
+            <h2 class="text-[#2B2929] font-light text-xl capitalize">Plan a Visit</h2>
+        </div>
+
+        <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
+        background-image: url('{{ asset('images/give.jpg') }}');
+        height: 320px;
+        width: 310px;
+        ">
+            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed flex justify-center items-center"
+                style="background-color: rgba(10, 25, 64, 0.87)">
+                <h2 class="text-white font-light text-xl capitalize">Give</h2>
+            </div>
+
+        </div>
+
     </div>
+
+    {{-- Contact Form Section --}}
+    @livewire('contact-form')
 
 </div>
 @endsection

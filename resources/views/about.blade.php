@@ -65,9 +65,9 @@ About Us - Christ Preachers Church International
 
     {{-- Meet Our Executives --}}
     <div class="py-20 px-16">
-        <h2 class="text-[#332E2E] font-medium text-3xl text-center">Meet Our Executives</h2>
+        <h2 class="text-[#30332e] font-medium text-3xl text-center">Meet Our Executives</h2>
         <div class="flex flex-col items-center mt-4">
-            <div class="grid grid-cols-3 gap-x-20 mt-6">
+            <div class="grid grid-cols-3 gap-x-20 gap-y-20 mt-6">
                 {{-- Card 1 --}}
                 <div class="w-[269px] h-[328px]">
                     <img class="rounded-lg shadow-lg"

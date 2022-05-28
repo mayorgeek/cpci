@@ -14,6 +14,7 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    @livewireStyles
 </head>
 <body>
 
@@ -25,7 +26,7 @@
         <ul class="flex space-x-6 items-center">
           <li><a class="text-nav-links hover:text-primary" href="{{ route('homepage') }}">Home</a></li>
           <li><a class="text-nav-links hover:text-primary" href="">Blog</a></li>
-          <li><a class="text-nav-links hover:text-primary" href="">Next Steps</a></li>
+          <li><a class="text-nav-links hover:text-primary" href="{{ route('nextstepspage') }}">Next Steps</a></li>
           <li><a class="text-nav-links hover:text-primary" href="">Get Involved</a></li>
           <li><a class="text-nav-links hover:text-primary" href="{{ route('aboutpage') }}">About Us</a></li>
           <li><a class="text-nav-links hover:text-primary" href="{{ route('contactpage') }}">Contact</a></li>
@@ -120,5 +121,6 @@
     </footer>
 
     <script src="{{ asset('js/app.js') }}"></script>
+    @livewireScripts
 </body>
 </html>
