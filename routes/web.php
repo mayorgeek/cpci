@@ -27,3 +27,7 @@ Route::get('/contact', function () {
 Route::get('/next-steps', function () {
     return view('next-steps');
 })->name('nextstepspage');
+
+Route::get('/get-involved', function () {
+    return view('get-involved');
+})->name('getinvolvedpage');

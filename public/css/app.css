@@ -3781,6 +3781,12 @@ textarea.form-control.is-invalid {
 .mb-20 {
   margin-bottom: 5rem;
 }
+.mt-3 {
+  margin-top: 0.75rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
+}
 .block {
   display: block;
 }
@@ -3822,6 +3828,9 @@ textarea.form-control.is-invalid {
 }
 .h-\[273px\] {
   height: 273px;
+}
+.h-\[900px\] {
+  height: 900px;
 }
 .w-full {
   width: 100%;
@@ -3928,6 +3937,9 @@ textarea.form-control.is-invalid {
 .gap-x-14 {
   -moz-column-gap: 3.5rem;
        column-gap: 3.5rem;
+}
+.gap-y-14 {
+  row-gap: 3.5rem;
 }
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -4106,6 +4118,9 @@ textarea.form-control.is-invalid {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
 }
+.text-left {
+  text-align: left;
+}
 .text-center {
   text-align: center;
 }
@@ -4239,6 +4254,10 @@ textarea.form-control.is-invalid {
 .text-\[\#504A4A\] {
   --tw-text-opacity: 1;
   color: rgb(80 74 74 / var(--tw-text-opacity));
+}
+.text-\[\#C4C4C4\] {
+  --tw-text-opacity: 1;
+  color: rgb(196 196 196 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;

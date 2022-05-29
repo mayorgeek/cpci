@@ -27,7 +27,7 @@
           <li><a class="text-nav-links hover:text-primary" href="{{ route('homepage') }}">Home</a></li>
           <li><a class="text-nav-links hover:text-primary" href="">Blog</a></li>
           <li><a class="text-nav-links hover:text-primary" href="{{ route('nextstepspage') }}">Next Steps</a></li>
-          <li><a class="text-nav-links hover:text-primary" href="">Get Involved</a></li>
+          <li><a class="text-nav-links hover:text-primary" href="{{ route('getinvolvedpage') }}">Get Involved</a></li>
           <li><a class="text-nav-links hover:text-primary" href="{{ route('aboutpage') }}">About Us</a></li>
           <li><a class="text-nav-links hover:text-primary" href="{{ route('contactpage') }}">Contact</a></li>
           <button type="button" class="px-6 py-2.5 bg-primary text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary active:shadow-lg transition duration-150 ease-in-out">Login</button>

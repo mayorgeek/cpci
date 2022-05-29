@@ -51,7 +51,7 @@ Next Steps - Christ Preachers Church International
                     <h2 class="text-white font-light text-xl capitalize">Step 1</h2>
                 </div>
             </div>
-    
+
             {{-- Pray --}}
             <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
             background-image: url('{{ asset('images/step-care-and-prayer.jpg') }}');
@@ -63,7 +63,7 @@ Next Steps - Christ Preachers Church International
                     <h2 class="text-white font-light text-xl capitalize">Pray</h2>
                 </div>
             </div>
-    
+
             {{-- Serving --}}
             <div class="bg-white p-12 flex justify-center items-center text-center overflow-hidden shadow-xl" style="
             height: 400px;
@@ -71,7 +71,7 @@ Next Steps - Christ Preachers Church International
             ">
                 <h2 class="text-[#2B2929] font-light text-xl capitalize">Serving</h2>
             </div>
-    
+
             {{-- Baptism --}}
             <div class="bg-white p-12 flex justify-center items-center text-center overflow-hidden shadow-xl" style="
             height: 400px;
@@ -79,7 +79,7 @@ Next Steps - Christ Preachers Church International
             ">
                 <h2 class="text-[#2B2929] font-light text-xl capitalize">Baptism</h2>
             </div>
-    
+
             {{-- Groups --}}
             <div class="bg-[#E5E5E5] p-12 flex justify-center items-center text-center overflow-hidden shadow-xl" style="
             height: 400px;
@@ -87,7 +87,7 @@ Next Steps - Christ Preachers Church International
             ">
                 <h2 class="text-[#2B2929] font-light text-xl capitalize">Groups</h2>
             </div>
-    
+
             {{-- Give --}}
             <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
             background-image: url('{{ asset('images/next-step-give.jpg') }}');
@@ -99,7 +99,7 @@ Next Steps - Christ Preachers Church International
                     <h2 class="text-white font-light text-xl capitalize">Give</h2>
                 </div>
             </div>
-    
+
             {{-- Connect --}}
             <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
             background-image: url('{{ asset('images/next-step-connect.jpg') }}');
@@ -111,7 +111,7 @@ Next Steps - Christ Preachers Church International
                     <h2 class="text-white font-light text-xl capitalize">Connect</h2>
                 </div>
             </div>
-    
+
             {{-- Baptism --}}
             <div class="p-12 flex justify-center items-center text-center overflow-hidden shadow-xl" style="
             background-color: rgba(50, 79, 155, 0.76)
@@ -120,7 +120,7 @@ Next Steps - Christ Preachers Church International
             ">
                 <h2 class="text-[#2B2929] font-light text-xl capitalize">Missions</h2>
             </div>
-    
+
             {{-- Salvation --}}
             <div class="bg-white p-12 flex justify-center items-center text-center overflow-hidden shadow-xl" style="
             height: 400px;
@@ -139,10 +139,13 @@ Next Steps - Christ Preachers Church International
             <h1 class="text-[#2B2929] text-center font-light text-4xl capitalize mt-6">Care & Prayer</h1>
 
             <p class="text-[#626060] font-light text-lg text-center mt-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim sit tellus ornare quam at nunc at mi, et. Gravida ultrices non urna pulvinar nibh in. Aliquet hac amet, augue ut faucibus laoreet a interdum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim sit tellus ornare quam at nunc at mi,
+                et. Gravida ultrices non urna pulvinar nibh in. Aliquet hac amet, augue ut faucibus laoreet a interdum.
             </p>
 
-            <button type="button" class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn More</button>
+            <button type="button"
+                class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
+                More</button>
         </div>
 
         {{-- Right Section --}}
@@ -159,7 +162,8 @@ Next Steps - Christ Preachers Church International
 
             <div class="mt-6 p-6">
                 <p class="text-[#626060] text-center font-light text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis massa ridiculus eget hac venenatis, amet, nibh aliquam. Quam pellentesque urna bibendum porttitor condimentum dolor.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis massa ridiculus eget hac venenatis,
+                    amet, nibh aliquam. Quam pellentesque urna bibendum porttitor condimentum dolor.
                 </p>
             </div>
         </div>
@@ -181,7 +185,8 @@ Next Steps - Christ Preachers Church International
 
             <div class="mt-6 p-6">
                 <p class="text-[#626060] text-center font-light text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis massa ridiculus eget hac venenatis, amet, nibh aliquam. Quam pellentesque urna bibendum porttitor condimentum dolor.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis massa ridiculus eget hac venenatis,
+                    amet, nibh aliquam. Quam pellentesque urna bibendum porttitor condimentum dolor.
                 </p>
             </div>
         </div>
@@ -192,10 +197,13 @@ Next Steps - Christ Preachers Church International
             <h1 class="text-[#2B2929] text-center font-light text-4xl capitalize mt-6">Serving</h1>
 
             <p class="text-[#626060] font-light text-lg text-center mt-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim sit tellus ornare quam at nunc at mi, et. Gravida ultrices non urna pulvinar nibh in. Aliquet hac amet, augue ut faucibus laoreet a interdum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim sit tellus ornare quam at nunc at mi,
+                et. Gravida ultrices non urna pulvinar nibh in. Aliquet hac amet, augue ut faucibus laoreet a interdum.
             </p>
 
-            <button type="button" class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn More</button>
+            <button type="button"
+                class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
+                More</button>
         </div>
     </div>
 
@@ -207,10 +215,13 @@ Next Steps - Christ Preachers Church International
             <h1 class="text-[#2B2929] text-center font-light text-4xl capitalize mt-6">Connect With a Group</h1>
 
             <p class="text-[#626060] font-light text-lg text-center mt-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim sit tellus ornare quam at nunc at mi, et. Gravida ultrices non urna pulvinar nibh in. Aliquet hac amet, augue ut faucibus laoreet a interdum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim sit tellus ornare quam at nunc at mi,
+                et. Gravida ultrices non urna pulvinar nibh in. Aliquet hac amet, augue ut faucibus laoreet a interdum.
             </p>
 
-            <button type="button" class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn More</button>
+            <button type="button"
+                class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
+                More</button>
         </div>
 
         {{-- Right Section --}}
@@ -227,7 +238,8 @@ Next Steps - Christ Preachers Church International
 
             <div class="mt-6 p-6">
                 <p class="text-[#626060] text-center font-light text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis massa ridiculus eget hac venenatis, amet, nibh aliquam. Quam pellentesque urna bibendum porttitor condimentum dolor.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis massa ridiculus eget hac venenatis,
+                    amet, nibh aliquam. Quam pellentesque urna bibendum porttitor condimentum dolor.
                 </p>
             </div>
         </div>
@@ -249,7 +261,8 @@ Next Steps - Christ Preachers Church International
 
             <div class="mt-6 p-6">
                 <p class="text-[#626060] text-center font-light text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis massa ridiculus eget hac venenatis, amet, nibh aliquam. Quam pellentesque urna bibendum porttitor condimentum dolor.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis massa ridiculus eget hac venenatis,
+                    amet, nibh aliquam. Quam pellentesque urna bibendum porttitor condimentum dolor.
                 </p>
             </div>
         </div>
@@ -260,10 +273,13 @@ Next Steps - Christ Preachers Church International
             <h1 class="text-[#2B2929] text-center font-light text-4xl capitalize mt-6">Missions</h1>
 
             <p class="text-[#626060] font-light text-lg text-center mt-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim sit tellus ornare quam at nunc at mi, et. Gravida ultrices non urna pulvinar nibh in. Aliquet hac amet, augue ut faucibus laoreet a interdum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim sit tellus ornare quam at nunc at mi,
+                et. Gravida ultrices non urna pulvinar nibh in. Aliquet hac amet, augue ut faucibus laoreet a interdum.
             </p>
 
-            <button type="button" class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn More</button>
+            <button type="button"
+                class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
+                More</button>
         </div>
     </div>
 
