@@ -20,6 +20,13 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+
+            $table->enum('gender', ['male', 'female'])->nullable();
+            $table->dateTime('dob')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->string('branch')->nullable();
+            $table->string('category')->nullable();
             $table->timestamps();
         });
     }
