@@ -31,3 +31,7 @@ Route::get('/next-steps', function () {
 Route::get('/get-involved', function () {
     return view('get-involved');
 })->name('getinvolvedpage');
+
+Route::get('/register-page', function () {
+    return view('register-page');
+})->name('registerpage');
