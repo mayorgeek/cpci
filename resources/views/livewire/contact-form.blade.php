@@ -14,7 +14,7 @@
           transition
           ease-in-out
           m-0
-          focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none" id="firstname"
+          focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none" id="firstname"
                 placeholder="First Name">
         </div>
 
@@ -31,7 +31,7 @@
           transition
           ease-in-out
           m-0
-          focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none" id="lastname"
+          focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none" id="lastname"
                 placeholder="Last Name">
         </div>
 
@@ -48,7 +48,7 @@
           transition
           ease-in-out
           m-0
-          focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none" id="exampleInput8"
+          focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none" id="exampleInput8"
                 placeholder="Email address">
         </div>
 
@@ -67,7 +67,7 @@
           transition
           ease-in-out
           m-0
-          focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none
+          focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none
         " id="message" rows="3" placeholder="Message"></textarea>
         </div>
 
@@ -75,7 +75,7 @@
         w-full
         px-6
         py-3.5
-        bg-primary
+        bg-main
         text-white
         font-medium
         text-xs

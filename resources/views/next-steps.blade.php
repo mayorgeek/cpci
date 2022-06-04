@@ -20,11 +20,11 @@ Next Steps - Christ Preachers Church International
                     <p class="w-[748px] font-light text-xl text-white opacity-95 mb-10 mt-2">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit.</p>
                     <div class="flex space-x-6 justify-center">
-                        <a class="inline-block px-6 py-3 bg-primary text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                        <a class="inline-block px-6 py-3 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                             href="#!" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">FILL OUT A
                             NEW HERE?</a>
 
-                        <a class="inline-block px-6 py-3 bg-white text-primary font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                        <a class="inline-block px-6 py-3 bg-white text-main font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                             href="#!" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">PRAYER
                             GET IN TOUCH</a>
                     </div>
@@ -144,7 +144,7 @@ Next Steps - Christ Preachers Church International
             </p>
 
             <button type="button"
-                class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
+                class="mt-12 px-6 py-3 border-2 border-main text-main font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
                 More</button>
         </div>
 
@@ -202,7 +202,7 @@ Next Steps - Christ Preachers Church International
             </p>
 
             <button type="button"
-                class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
+                class="mt-12 px-6 py-3 border-2 border-main text-main font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
                 More</button>
         </div>
     </div>
@@ -220,7 +220,7 @@ Next Steps - Christ Preachers Church International
             </p>
 
             <button type="button"
-                class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
+                class="mt-12 px-6 py-3 border-2 border-main text-main font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
                 More</button>
         </div>
 
@@ -278,7 +278,7 @@ Next Steps - Christ Preachers Church International
             </p>
 
             <button type="button"
-                class="mt-12 px-6 py-3 border-2 border-primary text-primary font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
+                class="mt-12 px-6 py-3 border-2 border-main text-main font-medium text-xs leading-tight uppercase rounded hover:bg-gray-800 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Learn
                 More</button>
         </div>
     </div>

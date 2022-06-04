@@ -24,7 +24,7 @@ Christ Preachers Church International
                     <p class="font-normal text-lg text-[#2B2929]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae cras libero, feugiat sit lacus, egestas dui. Volutpat nulla amet senectus lectus aliquet nullam.
                     </p>
-                    <button type="button" class="w-1/5 inline-block mt-8 px-6 py-2.5 bg-primary text-white font-medium text-xs leading-tight capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button>
+                    <button type="button" class="w-1/5 inline-block mt-8 px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@ Christ Preachers Church International
                     <p class="font-normal text-lg text-[#2B2929]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae cras libero, feugiat sit lacus, egestas dui. Volutpat nulla amet senectus lectus aliquet nullam.
                     </p>
-                    <button type="button" class="w-1/5 inline-block mt-8 px-6 py-2.5 bg-primary text-white font-medium text-xs leading-tight capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button>
+                    <button type="button" class="w-1/5 inline-block mt-8 px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button>
                 </div>
 
                 <div>

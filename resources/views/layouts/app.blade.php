@@ -20,17 +20,17 @@
 
     <nav class="flex justify-between items-center px-16 py-4">
       <div>
-        <h1 class="text-primary text-2xl font-medium">CPCI</h1>
+        <h1 class="text-main text-2xl font-medium">CPCI</h1>
       </div>
       <div>
         <ul class="flex space-x-6 items-center">
-          <li><a class="text-nav-links hover:text-primary" href="{{ route('homepage') }}">Home</a></li>
-          <li><a class="text-nav-links hover:text-primary" href="">Blog</a></li>
-          <li><a class="text-nav-links hover:text-primary" href="{{ route('nextstepspage') }}">Next Steps</a></li>
-          <li><a class="text-nav-links hover:text-primary" href="{{ route('getinvolvedpage') }}">Get Involved</a></li>
-          <li><a class="text-nav-links hover:text-primary" href="{{ route('aboutpage') }}">About Us</a></li>
-          <li><a class="text-nav-links hover:text-primary" href="{{ route('contactpage') }}">Contact</a></li>
-          <button type="button" class="px-6 py-2.5 bg-primary text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary active:shadow-lg transition duration-150 ease-in-out">Login</button>
+          <li><a class="text-nav-links hover:text-main" href="{{ route('homepage') }}">Home</a></li>
+          <li><a class="text-nav-links hover:text-main" href="">Blog</a></li>
+          <li><a class="text-nav-links hover:text-main" href="{{ route('nextstepspage') }}">Next Steps</a></li>
+          <li><a class="text-nav-links hover:text-main" href="{{ route('getinvolvedpage') }}">Get Involved</a></li>
+          <li><a class="text-nav-links hover:text-main" href="{{ route('aboutpage') }}">About Us</a></li>
+          <li><a class="text-nav-links hover:text-main" href="{{ route('contactpage') }}">Contact</a></li>
+          <a href="{{ route('filament.auth.login') }}" class="px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-main active:shadow-lg transition duration-150 ease-in-out">Login</a>
         </ul>
       </div>
     </nav>
@@ -38,7 +38,7 @@
     @yield('content')
 
     <footer>
-      <div class="bg-primary py-20">
+      <div class="bg-main py-20">
         <div class="flex items-start justify-center space-x-56 text-white">
           <div>
             <h2 class="text-lg font-semibold mb-4">About Us</h2>

@@ -20,11 +20,11 @@ Contact - Christ Preachers Church International
                     <p class="w-[748px] font-light text-xl text-white opacity-95 mb-10 mt-2">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit.</p>
                     <div class="flex space-x-6 justify-center">
-                        <a class="inline-block px-6 py-3 bg-primary text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                        <a class="inline-block px-6 py-3 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                             href="#!" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">FILL OUT A
                             CONNECTION CARD?</a>
 
-                        <a class="inline-block px-6 py-3 bg-white text-primary font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                        <a class="inline-block px-6 py-3 bg-white text-main font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                             href="#!" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">PRAYER
                             REQUESTS</a>
                     </div>
