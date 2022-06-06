@@ -22,11 +22,11 @@ return new class extends Migration
             $table->rememberToken();
 
             $table->enum('gender', ['male', 'female'])->nullable();
-            $table->dateTime('dob')->nullable();
+            $table->dateTime('birthday')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
             $table->string('branch')->nullable();
-            $table->string('category')->nullable();
+            $table->string('fellowship')->nullable();
             $table->timestamps();
         });
     }
