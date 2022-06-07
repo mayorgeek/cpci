@@ -35,3 +35,11 @@ Route::get('/get-involved', function () {
 Route::get('/register-page', function () {
     return view('register-page');
 })->name('registerpage');
+
+Route::get('/blog', function () {
+    return view('blog');
+})->name('blogpage');
+
+Route::get('/blog-details-page', function () {
+    return view('blog-details-page');
+})->name('blogdetailspage');

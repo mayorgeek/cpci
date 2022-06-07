@@ -25,7 +25,7 @@
       <div>
         <ul class="flex space-x-6 items-center">
           <li><a class="text-nav-links hover:text-main" href="{{ route('homepage') }}">Home</a></li>
-          <li><a class="text-nav-links hover:text-main" href="">Blog</a></li>
+          <li><a class="text-nav-links hover:text-main" href="{{ route('blogpage') }}">Blog</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('nextstepspage') }}">Next Steps</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('getinvolvedpage') }}">Get Involved</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('aboutpage') }}">About Us</a></li>
