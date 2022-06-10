@@ -43,3 +43,7 @@ Route::get('/blog', function () {
 Route::get('/blog-details-page', function () {
     return view('blog-details-page');
 })->name('blogdetailspage');
+
+Route::get('/events', function () {
+    return view('events');
+})->name('eventspage');

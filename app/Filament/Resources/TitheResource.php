@@ -15,7 +15,7 @@ class TitheResource extends Resource
 {
     protected static ?string $model = Tithe::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-cash';
 
     public static function form(Form $form): Form
     {

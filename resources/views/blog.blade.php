@@ -18,8 +18,8 @@ Blog - Christ Preachers Church International
 
         {{-- Left Side --}}
         <div class="">
-            {{-- Featured Blog Posts --}}
-            <div class="rounded-lg shadow-lg bg-white w-ful">
+            {{-- Blog Posts --}}
+            <div class="rounded-lg shadow-lg bg-white w-full">
                 <a href="#!">
                     <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt="" />
                 </a>

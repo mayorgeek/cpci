@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->json('metadata')->nullable();
+            $table->string('video_link')->nullable();
+            $table->string('event_pic');
             $table->string('title');
             $table->string('content');
             $table->dateTime('scheduled_time');
             $table->timestamps();
-
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
         });
     }
 

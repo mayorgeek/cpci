@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('post_pic')->nullable();
             $table->json('metadata')->nullable();
             $table->string('image')->nullable();
             $table->string('slug');
@@ -22,8 +23,7 @@ return new class extends Migration
             $table->text('body');
             $table->timestamps();
             
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
+            $table->string('posted_by');
         });
     }
 

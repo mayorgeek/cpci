@@ -79,6 +79,7 @@
           <div>
             <h2 class="text-lg font-semibold mb-4">Get Involved</h2>
             <ul class="space-y-2">
+              <li><a href="{{ route('eventspage') }}">Events</a></li>
               <li>Give</li>
               <li>Volunteer</li>
               <li>Visit</li>

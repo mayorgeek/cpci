@@ -2,20 +2,21 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Forms;
+use App\Models\User;
+use Filament\Tables;
+use App\Models\Branch;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
 use App\Filament\Resources\BranchResource\Pages;
 use App\Filament\Resources\BranchResource\RelationManagers;
-use App\Models\Branch;
-use Filament\Forms;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
-use Filament\Tables;
 
 class BranchResource extends Resource
 {
     protected static ?string $model = Branch::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-office-building';
 
     public static function form(Form $form): Form
     {
@@ -24,9 +25,9 @@ class BranchResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('branch_head')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Select::make('branch_head')
+                    ->options(User::where('role', 'pastor')->pluck('name', 'id'))
+                    ->required(),
                 Forms\Components\TextInput::make('country')
                     ->required()
                     ->maxLength(255),

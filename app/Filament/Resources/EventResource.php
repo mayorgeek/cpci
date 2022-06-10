@@ -15,18 +15,23 @@ class EventResource extends Resource
 {
     protected static ?string $model = Event::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-calendar';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Forms\Components\FileUpload::make('event_pic')
+                    ->image()
+                    ->required(),
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('content')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('video_link')
+                    ->url(),
                 Forms\Components\DateTimePicker::make('scheduled_time')
                     ->required(),
             ]);
@@ -36,7 +41,6 @@ class EventResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user_id'),
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('content'),
                 Tables\Columns\TextColumn::make('scheduled_time')

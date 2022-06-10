@@ -4498,6 +4498,10 @@ textarea.form-control.is-invalid {
 .\!m-0 {
   margin: 0px !important;
 }
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -4525,10 +4529,6 @@ textarea.form-control.is-invalid {
 .-mx-3 {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
-}
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -4829,6 +4829,11 @@ textarea.form-control.is-invalid {
 }
 .w-80 {
   width: 20rem;
+}
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .min-w-0 {
   min-width: 0px;

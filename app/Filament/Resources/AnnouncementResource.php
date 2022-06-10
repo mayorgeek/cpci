@@ -15,7 +15,7 @@ class AnnouncementResource extends Resource
 {
     protected static ?string $model = Announcement::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-speakerphone';
 
     public static function form(Form $form): Form
     {
@@ -34,6 +34,7 @@ class AnnouncementResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TagsColumn::make('branch'),
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('content'),
                 Tables\Columns\TextColumn::make('created_at')

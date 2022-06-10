@@ -15,7 +15,7 @@ class OfferingResource extends Resource
 {
     protected static ?string $model = Offering::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-cash';
 
     public static function form(Form $form): Form
     {
