@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->json('metadata')->nullable();
-            $table->string('video_link')->nullable();
+            $table->string('slug');
             $table->string('event_pic');
             $table->string('title');
             $table->string('content');

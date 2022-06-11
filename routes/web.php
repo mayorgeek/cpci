@@ -1,4 +1,9 @@
 <?php
+
+use App\Http\Livewire\Blog;
+use App\Http\Livewire\BlogDetails;
+use App\Http\Livewire\EventDetails;
+use App\Http\Livewire\Events;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,14 +41,10 @@ Route::get('/register-page', function () {
     return view('register-page');
 })->name('registerpage');
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blogpage');
+Route::get('/blog', Blog::class)->name('blogpage');
 
-Route::get('/blog-details-page', function () {
-    return view('blog-details-page');
-})->name('blogdetailspage');
+Route::get('/blog/{slug}', BlogDetails::class)->name('blogdetailspage');
 
-Route::get('/events', function () {
-    return view('events');
-})->name('eventspage');
+Route::get('/events', Events::class)->name('eventspage');
+
+Route::get('/event/{slug}', EventDetails::class)->name('eventdetailspage');

@@ -1,21 +1,21 @@
 @extends('layouts.app')
 
 @section('title')
-Selected Blog - Christ Preachers International Church
+{{ $post->title }} - Christ Preachers Church International
 @endsection
 
 @section('content')
 <div>
 
     <div class="p-20">
-        <h1 class="text-gray-900 text-3xl font-medium mb-3">Welcome to Blog Post!</h1>
+        <h1 class="text-gray-900 text-3xl font-medium mb-3">{{ $post }}</h1>
         <p class="text-gray-400 text-base font-light mb-6">
-            Posted on January 1, 2022 by Start Bootstrap
+            Posted on {{ $post->created_at }} by {{ $post->posted_by }}
         </p>
 
         {{-- Main Blog Post Content --}}
         <div class="my-12">
-            
+            {{ $post->body }}
         </div>
 
         {{-- Comments Section --}}

@@ -6,7 +6,7 @@
             <label for="name" class="form-label inline-block mb-2 text-gray-700">Name</label>
             <input wire:model.lazy="name" type="text" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none @error('name')
                     border-red-500
-@enderror"
+            @enderror"
                 id=" name" placeholder="Your Name">
 
             @error('name')
@@ -18,7 +18,7 @@
             <label for="email" class="form-label inline-block mb-2 text-gray-700">Email Address</label>
             <input wire:model.lazy="email" type="email" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none @error('email')
                     border-red-500    
-@enderror"
+            @enderror"
                 id=" email" aria-describedby="emailHelp" placeholder="Your Email Address">
 
             @error('email')
@@ -47,12 +47,6 @@
 
         <div class="form-group mb-6">
             <label for="birthday" class="form-label inline-block mb-2 text-gray-700">Birthday</label>
-            {{-- <div class="datepicker relative form-floating mb-3 xl:w-96">
-                <input wire:model="birthday" id="birthday" type="text"
-                  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Select Your Birthday" />
-                <label for="floatingInput" class="text-gray-700">Select Your Birthday</label>
-            </div> --}}
             <div class="datepicker relative form-floating xl:w-96" data-mdb-toggle-button="false">
                 <input wire:model.lazy="birthday" type="date"
                   class="form-control block w-full px-3 py-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none @error('birthday')
@@ -127,6 +121,26 @@
             </div>
 
             @error('fellowship')
+                <small class="text-red-500 text-xs">{{ $message }}</small>
+            @enderror
+        </div>
+
+        <div class="form-group mb-6">
+            <label for="role" class="form-label inline-block mb-2 text-gray-700">Role</label>
+            <div class="xl:w-96">
+                <select wire:model.lazy="role" id="role"
+                    class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none @error('role')
+                        border-red-500     
+                    @enderror"
+                    aria-label="Select Your Fellowship Group">
+                    <option selected>Select Your Role</option>
+                    <option value="member">Member</option>
+                    <option value="secretary">Secretary</option>
+                    <option value="pastor">Pastor</option>
+                </select>
+            </div>
+
+            @error('role')
                 <small class="text-red-500 text-xs">{{ $message }}</small>
             @enderror
         </div>

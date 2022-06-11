@@ -28,6 +28,8 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('branch')->nullable();
             $table->string('fellowship')->nullable();
+
+            $table->enum('role', ['member', 'pastor', 'secretary', 'admin']);
             $table->timestamps();
         });
     }

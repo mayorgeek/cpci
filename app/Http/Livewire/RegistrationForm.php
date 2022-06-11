@@ -17,6 +17,7 @@ class RegistrationForm extends Component
     public $address;
     public $branch;
     public $fellowship;
+    public $role;
     public $password;
     public $password_confirmation;
 
@@ -35,6 +36,7 @@ class RegistrationForm extends Component
             'address' => ['required', 'string'],
             'branch' => ['required', 'string'],
             'fellowship' => ['required', 'string'],
+            'role' => ['required', 'string'],
             'password' => ['required', 'confirmed'],
         ]);
 
@@ -47,6 +49,7 @@ class RegistrationForm extends Component
             'address' => $data['address'],
             'branch' => $data['branch'],
             'fellowship' => $data['fellowship'],
+            'role' => $data['role'],
             'password' => Hash::make($data['password']),
         ]);
 
