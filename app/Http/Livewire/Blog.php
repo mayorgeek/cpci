@@ -12,7 +12,7 @@ class Blog extends Component
     public Collection $posts;
 
     public function mount() {
-        $this->posts = Post::all();
+        $this->posts = Post::orderBy('created_at', 'desc')->get();
     }
 
     public function render()

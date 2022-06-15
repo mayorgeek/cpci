@@ -8,14 +8,18 @@
 <div>
 
     <div class="p-20">
-        <h1 class="text-gray-900 text-3xl font-medium mb-3">{{ $post }}</h1>
+        <h1 class="text-gray-900 text-3xl font-medium mb-3">{{ $post->title }}</h1>
         <p class="text-gray-400 text-base font-light mb-6">
-            Posted on {{ $post->created_at }} by {{ $post->posted_by }}
+            Posted {{ $post->created_at->diffForHumans() }} by {{ $post->posted_by }}
         </p>
 
+        <div class="mt-12">
+            <img class="rounded-md" src="{{ asset("storage/$post->post_pic") }}" alt="{{ $post->title }}">
+        </div>
+
         {{-- Main Blog Post Content --}}
-        <div class="my-12">
-            {{ $post->body }}
+        <div class="my-20">
+            {!! $post->body !!}
         </div>
 
         {{-- Comments Section --}}

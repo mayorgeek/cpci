@@ -2,28 +2,29 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\GivingResource\Pages;
-use App\Filament\Resources\GivingResource\RelationManagers;
-use App\Models\Giving;
+use App\Filament\Resources\ActivityLogsResource\Pages;
+use App\Filament\Resources\ActivityLogsResource\RelationManagers;
+use App\Models\ActivityLog;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 
-class GivingResource extends Resource
+class ActivityLogsResource extends Resource
 {
-    protected static ?string $model = Giving::class;
+    protected static ?string $model = ActivityLog::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
-    protected static ?string $navigationGroup = 'finances';
+    protected static ?string $navigationGroup = 'app logs';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                
+                //
             ]);
     }
 
@@ -31,13 +32,9 @@ class GivingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('trx_code'),
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('amount'),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('username'),
+                TextColumn::make('action'),
+                TextColumn::make('created_at')
                     ->dateTime(),
             ])
             ->filters([
@@ -55,7 +52,7 @@ class GivingResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListGivings::route('/'),
+            'index' => Pages\ListActivityLogs::route('/'),
         ];
     }
 }

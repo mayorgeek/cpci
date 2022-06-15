@@ -30,8 +30,12 @@
           <li><a class="text-nav-links hover:text-main" href="{{ route('getinvolvedpage') }}">Get Involved</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('aboutpage') }}">About Us</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('contactpage') }}">Contact</a></li>
-          <a href="{{ route('registerpage') }}" class="px-6 py-2.5 bg-gray-100 text-main font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 active:shadow-lg transition duration-150 ease-in-out">Register</a>
-          <a href="{{ route('filament.auth.login') }}" class="px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-main active:shadow-lg transition duration-150 ease-in-out">Login</a>
+
+          @guest
+            <a href="{{ route('registerpage') }}" class="px-6 py-2.5 bg-gray-100 text-main font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 active:shadow-lg transition duration-150 ease-in-out">Register</a>
+            <a href="{{ route('filament.auth.login') }}" class="px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-main active:shadow-lg transition duration-150 ease-in-out">Login</a>            
+          @endguest
+
         </ul>
       </div>
     </nav>

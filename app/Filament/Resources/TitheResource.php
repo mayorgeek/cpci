@@ -17,6 +17,8 @@ class TitheResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-cash';
 
+    protected static ?string $navigationGroup = 'finances';
+
     public static function form(Form $form): Form
     {
         return $form

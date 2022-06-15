@@ -22,12 +22,12 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
 
-            $table->enum('gender', ['male', 'female'])->nullable();
-            $table->dateTime('birthday')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('address')->nullable();
-            $table->string('branch')->nullable();
-            $table->string('fellowship')->nullable();
+            $table->enum('gender', ['male', 'female']);
+            $table->dateTime('birthday');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('branch');
+            $table->string('fellowship');
 
             $table->enum('role', ['member', 'pastor', 'secretary', 'admin']);
             $table->timestamps();

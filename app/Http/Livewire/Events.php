@@ -11,7 +11,7 @@ class Events extends Component
     public Collection $events;
 
     public function mount() {
-        $this->events = Event::all();
+        $this->events = Event::orderBy('created_at', 'desc')->get();
     }
 
     public function render()

@@ -2,28 +2,29 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\GivingResource\Pages;
-use App\Filament\Resources\GivingResource\RelationManagers;
-use App\Models\Giving;
+use App\Filament\Resources\UserLogsResource\Pages;
+use App\Filament\Resources\UserLogsResource\RelationManagers;
+use App\Models\UserLog;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 
-class GivingResource extends Resource
+class UserLogsResource extends Resource
 {
-    protected static ?string $model = Giving::class;
+    protected static ?string $model = UserLog::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
-    protected static ?string $navigationGroup = 'finances';
+    protected static ?string $navigationGroup = 'app logs';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                
+                //
             ]);
     }
 
@@ -31,13 +32,10 @@ class GivingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('trx_code'),
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('amount'),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('user_id'),
+                TextColumn::make('login_date')
                     ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('logout_date')
                     ->dateTime(),
             ])
             ->filters([
@@ -55,7 +53,7 @@ class GivingResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListGivings::route('/'),
+            'index' => Pages\ListUserLogs::route('/'),
         ];
     }
 }

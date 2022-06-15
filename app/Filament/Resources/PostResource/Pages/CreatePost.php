@@ -3,7 +3,9 @@
 namespace App\Filament\Resources\PostResource\Pages;
 
 use App\Filament\Resources\PostResource;
+use App\Models\ActivityLog;
 use Filament\Resources\Pages\CreateRecord;
+use Illuminate\Support\Facades\Auth;
 
 class CreatePost extends CreateRecord
 {
@@ -14,6 +16,13 @@ class CreatePost extends CreateRecord
         $data['posted_by'] = auth()->user()->name;
     
         return $data;
+    }
+
+    protected function afterCreate(): void {
+        ActivityLog::create([
+            'username' => Auth::user()->name,
+            'action' => 'Created a blog post'
+        ]);
     }
 
 }

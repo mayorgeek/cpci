@@ -13,6 +13,7 @@ use Filament\Forms\Components\Card;
 use phpDocumentor\Reflection\Types\Callable_;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
+use App\Filament\Resources\PostResource\Widgets\PostsOverview;
 
 class PostResource extends Resource
 {
@@ -26,7 +27,10 @@ class PostResource extends Resource
             ->schema([
                 Card::make()
                 ->schema([
-                    Forms\Components\FileUpload::make('post_pic')->image(),
+                    Forms\Components\FileUpload::make('post_pic')
+                        ->image()
+                        ->directory('blog/post-pics')
+                        ->maxSize(5120),
                     Forms\Components\TextInput::make('title')
                         ->required()
                         ->maxLength(255)
@@ -50,7 +54,9 @@ class PostResource extends Resource
                         'redo',
                         'strike',
                         'undo',
-                    ])->required(),
+                    ])
+                    ->fileAttachmentsDirectory('blog/attachements')
+                    ->required(),
                 ]),
             ]);
     }
@@ -60,9 +66,10 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('posted_by'),
-                Tables\Columns\TextColumn::make('slug'),
+                // Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('body'),
+                // Tables\Columns\TextColumn::make('body')
+                //     ->html(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
@@ -86,6 +93,13 @@ class PostResource extends Resource
             'index' => Pages\ListPosts::route('/'),
             'create' => Pages\CreatePost::route('/create'),
             'edit' => Pages\EditPost::route('/{record}/edit'),
+            'view' => Pages\ViewPost::route('/{record}'),
+        ];
+    }
+
+    public static function getWidgets(): array {
+        return [
+            PostsOverview::class,
         ];
     }
 }
