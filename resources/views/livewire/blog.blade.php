@@ -27,7 +27,7 @@ Our Blog - Christ Preachers Church International
 
 
     {{-- Main Content --}}
-    <div class="bg-gray-50 p-20 flex justify-between space-x-20">
+    <div class="bg-gray-50 p-20 flex justify-between">
 
         {{-- Left Side --}}
         <div class="space-y-24">
@@ -57,8 +57,7 @@ Our Blog - Christ Preachers Church International
         </div>
 
         {{-- Right Side --}}
-        <div>
-            {{-- Search --}}
+        {{-- <div>
             <div class="block rounded-lg shadow-lg bg-white max-w-sm mb-12">
                 <div class="py-3 px-6 border-b border-gray-100 bg-gray-100">
                     Search
@@ -80,7 +79,6 @@ Our Blog - Christ Preachers Church International
                 </div>
             </div>
 
-            {{-- Categories --}}
             <div class="block rounded-lg shadow-lg bg-white max-w-sm mb-12">
                 <div class="py-3 px-6 border-b border-gray-100 bg-gray-100">
                     Categories
@@ -109,7 +107,7 @@ Our Blog - Christ Preachers Church International
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
     </div>
 

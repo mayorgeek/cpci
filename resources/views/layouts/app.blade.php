@@ -22,7 +22,7 @@
       <div>
         <h1 class="text-main text-2xl font-medium">CPCI</h1>
       </div>
-      <div>
+      <div class="hidden lg:flex">
         <ul class="flex space-x-6 items-center">
           <li><a class="text-nav-links hover:text-main" href="{{ route('homepage') }}">Home</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('blogpage') }}">Blog</a></li>
@@ -37,6 +37,81 @@
           @endguest
 
         </ul>
+      </div>
+
+      <div x-data="{ 
+        message: 'good',
+        isOpen: false,
+        drawer() {
+          this.isOpen = !this.isOpen
+        }
+       }" class="lg:hidden">
+        <button type="button" aria-label="Open Menu" title="Open Menu"
+          class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline" @click="drawer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+
+
+        <transition enter-class="opacity-0" enter-active-class="ease-out transition-medium"
+          enter-to-class="opacity-100" leave-class="opacity-100" leave-active-class="ease-out transition-medium"
+          leave-to-class="opacity-0">
+          <div x-show="isOpen" class="z-10 fixed inset-0 transition-opacity">
+            <div @click="isOpen = false" class="absolute inset-0 bg-black opacity-50" tabindex="0"></div>
+          </div>
+        </transition>
+        <aside
+          class="transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
+          :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+
+          <div class="flex flex-row-reverse pt-5 px-6 mb-2">
+            <button type="button" @click="isOpen = false">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="flex flex-col text-left space-y-4 pt-3 px-6">
+            <span @click="isOpen = false">
+              <a class="text-nav-links hover:text-main" href="{{ route('homepage') }}">Home</a>
+            </span>
+
+            <span @click="isOpen = false">
+              <a class="text-nav-links hover:text-main" href="{{ route('blogpage') }}">Blog</a>
+            </span>
+
+            <span @click="isOpen = false">
+              <a class="text-nav-links hover:text-main" href="{{ route('nextstepspage') }}">Next Steps</a>
+            </span>
+
+            <span @click="isOpen = false">
+              <a class="text-nav-links hover:text-main" href="{{ route('getinvolvedpage') }}">Get Involved</a>
+            </span>
+
+            <span @click="isOpen = false">
+              <a class="text-nav-links hover:text-main" href="{{ route('aboutpage') }}">About Us</a>
+            </span>
+
+            <span @click="isOpen = false">
+              <a class="text-nav-links hover:text-main" href="{{ route('contactpage') }}">Contact</a>
+            </span>
+
+            <span @click="isOpen = false">
+              <a class="text-nav-links hover:text-main" href="{{ route('registerpage') }}">Register</a>
+            </span>
+
+            <span @click="isOpen = false">
+              <a href="{{ route('filament.auth.login') }}" class="px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-main active:shadow-lg transition duration-150 ease-in-out">Login</a>            
+            </span>
+
+          </div>
+
+        </aside>
+
       </div>
     </nav>
     
