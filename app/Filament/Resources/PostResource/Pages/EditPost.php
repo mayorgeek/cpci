@@ -11,7 +11,8 @@ class EditPost extends EditRecord
 {
     protected static string $resource = PostResource::class;
 
-    protected function afterSave(): void {
+    protected function afterSave(): void 
+    {
         ActivityLog::create([
             'username' => Auth::user()->name,
             'action' => 'Edited a post'

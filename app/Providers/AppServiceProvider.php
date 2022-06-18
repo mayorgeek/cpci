@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Filament\Facades\Filament;
+use Filament\Navigation\UserMenuItem;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -29,6 +31,10 @@ class AppServiceProvider extends ServiceProvider
             Filament::registerNavigationGroups([
                 'finances',
                 'app logs',
+            ]);
+            Filament::registerUserMenuItems([
+                'account' => UserMenuItem::make()->url(route('filament.resources.users.edit', ["record" => Auth::id()])),
+                // ...
             ]);
         });
     }

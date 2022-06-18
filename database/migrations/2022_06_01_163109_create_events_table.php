@@ -15,11 +15,14 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->json('metadata')->nullable();
-            $table->string('slug');
-            $table->string('event_pic');
+            $table->string('event_pic')->nullable();
+
             $table->string('title');
+            $table->string('slug');
             $table->string('content');
+            
+            $table->string('event_link')->nullable();
+            
             $table->dateTime('scheduled_time');
             $table->timestamps();
         });

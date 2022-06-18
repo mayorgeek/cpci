@@ -2,14 +2,16 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Forms;
+use Filament\Tables;
+use App\Models\Event;
+use Illuminate\Support\Str;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Card;
 use App\Filament\Resources\EventResource\Pages;
 use App\Filament\Resources\EventResource\RelationManagers;
-use App\Models\Event;
-use Filament\Forms;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
-use Filament\Tables;
 
 class EventResource extends Resource
 {
@@ -21,19 +23,27 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('event_pic')
-                    ->image()
-                    ->required(),
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('content')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('video_link')
-                    ->url(),
-                Forms\Components\DateTimePicker::make('scheduled_time')
-                    ->required(),
+                Card::make([
+                    Forms\Components\FileUpload::make('event_pic')
+                        ->image()
+                        ->columnSpan('full'),
+                    Forms\Components\TextInput::make('title')
+                        ->required()
+                        ->maxLength(255)
+                        ->reactive()
+                        ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                    Forms\Components\TextInput::make('slug')
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('content')
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('event_link')
+                        ->url()
+                        ->hint("Youtube video link for the event"),
+                    Forms\Components\DateTimePicker::make('scheduled_time')
+                        ->required(),
+                ]),
             ]);
     }
 
@@ -46,8 +56,6 @@ class EventResource extends Resource
                 Tables\Columns\TextColumn::make('scheduled_time')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
             ])
             ->filters([

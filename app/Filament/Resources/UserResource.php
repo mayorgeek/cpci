@@ -15,7 +15,10 @@ use App\Filament\Resources\UserResource\Pages\ListUsers;
 use App\Filament\Resources\UserResource\Pages\CreateUser;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Filament\Resources\UserResource\Widgets\UsersOverview;
+use App\Models\Branch;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 
@@ -30,12 +33,28 @@ class UserResource extends Resource
         return $form
             ->schema([
                 Card::make([
+                    FileUpload::make('profile_pic')
+                        ->image()
+                        ->avatar(),
                     TextInput::make('name'),
                     TextInput::make('email'),
-                    TextInput::make('role'),
+                    Select::make('role')
+                        ->options([
+                            'member',
+                            'secretary',
+                            'pastor',
+                            'admin'
+                        ]),
                     TextInput::make('phone'),
-                    TextInput::make('branch'),
-                    TextInput::make('fellowship'),
+                    Select::make('branch')
+                        ->options(Branch::all()),
+                    Select::make('fellowship')
+                        ->options([
+                            'teens',
+                            'youths',
+                            'women',
+                            'men'
+                        ]),
                 ]),
             ]);
     }
@@ -67,6 +86,7 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ListUsers::route('/'),
+            'edit' => Pages\EditUser::route('/{record}/edit'),
             'view' => Pages\ViewUser::route('/{record}'),
         ];
     }

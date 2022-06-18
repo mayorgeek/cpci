@@ -11,6 +11,7 @@ use Filament\Resources\Table;
 use Filament\Resources\Resource;
 use App\Filament\Resources\BranchResource\Pages;
 use App\Filament\Resources\BranchResource\RelationManagers;
+use App\Filament\Resources\BranchResource\Widgets\BranchOverview;
 
 class BranchResource extends Resource
 {
@@ -48,10 +49,7 @@ class BranchResource extends Resource
                 Tables\Columns\TextColumn::make('branch_head'),
                 Tables\Columns\TextColumn::make('country'),
                 Tables\Columns\TextColumn::make('state'),
-                Tables\Columns\TextColumn::make('address'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
             ])
             ->filters([
@@ -72,6 +70,15 @@ class BranchResource extends Resource
             'index' => Pages\ListBranches::route('/'),
             'create' => Pages\CreateBranch::route('/create'),
             'edit' => Pages\EditBranch::route('/{record}/edit'),
+            'view' => Pages\ViewBranch::route('/{record}'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            BranchOverview::class,
+        ];
+    }
+
 }
