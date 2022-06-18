@@ -3,6 +3,7 @@
 use App\Filament\Resources\AnnouncementResource\Widgets\AnnouncementOverview;
 use App\Filament\Resources\BranchResource\Widgets\BranchOverview;
 use App\Filament\Resources\EventResource\Widgets\EventsOverview;
+use App\Filament\Resources\OfferingResource\Widgets\OfferingChart;
 use App\Filament\Resources\PostResource\Widgets\PostsOverview;
 use App\Filament\Resources\UserResource\Widgets\UsersOverview;
 use Filament\Http\Middleware\Authenticate;
@@ -153,6 +154,7 @@ return [
             EventsOverview::class,
             PostsOverview::class,
             UsersOverview::class,
+            OfferingChart::class,
             // Widgets\FilamentInfoWidget::class,
         ],
     ],

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\OfferingResource\Pages;
 use App\Filament\Resources\OfferingResource\RelationManagers;
+use App\Filament\Resources\OfferingResource\Widgets\OfferingChart;
 use App\Models\Offering;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -56,4 +57,12 @@ class OfferingResource extends Resource
             'index' => Pages\ListOfferings::route('/'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            OfferingChart::class,
+        ];
+    }
+
 }
