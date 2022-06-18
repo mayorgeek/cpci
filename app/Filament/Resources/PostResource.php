@@ -13,6 +13,7 @@ use Filament\Forms\Components\Card;
 use phpDocumentor\Reflection\Types\Callable_;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
+use App\Filament\Resources\PostResource\Widgets\CommentOverview;
 use App\Filament\Resources\PostResource\Widgets\PostsOverview;
 
 class PostResource extends Resource
@@ -39,6 +40,10 @@ class PostResource extends Resource
                     Forms\Components\TextInput::make('slug')
                         ->required()
                         ->maxLength(255),
+                    Forms\Components\RichEditor::make('summary')
+                        ->required()
+                        ->maxLength(200)
+                        ->disableAllToolbarButtons(),
                     Forms\Components\RichEditor::make('body')
                     ->toolbarButtons([
                         'attachFiles',
@@ -97,7 +102,8 @@ class PostResource extends Resource
         ];
     }
 
-    public static function getWidgets(): array {
+    public static function getWidgets(): array 
+    {
         return [
             PostsOverview::class,
         ];

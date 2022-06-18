@@ -4,7 +4,9 @@ namespace App\Filament\Resources\PostResource\Pages;
 
 use App\Filament\Resources\PostResource;
 use App\Filament\Resources\PostResource\Widgets\PostsOverview;
+use App\Models\Post;
 use Filament\Resources\Pages\ListRecords;
+use Illuminate\Database\Eloquent\Builder;
 
 class ListPosts extends ListRecords
 {
@@ -15,6 +17,11 @@ class ListPosts extends ListRecords
         return [
             PostsOverview::class,
         ];
+    }
+
+    protected function getTableQuery(): Builder
+    {
+        return Post::query()->orderBy('created_at', 'desc');
     }
 
 }

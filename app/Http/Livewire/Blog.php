@@ -3,20 +3,17 @@
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Blog extends Component
 {
-
-    public Collection $posts;
-
-    public function mount() {
-        $this->posts = Post::orderBy('created_at', 'desc')->get();
-    }
+    use WithPagination;
 
     public function render()
     {
-        return view('livewire.blog');
+        return view('livewire.blog', [
+            'posts' => Post::orderBy('created_at', 'desc')->paginate(6)
+        ]);
     }
 }

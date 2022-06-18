@@ -14,6 +14,7 @@ use App\Filament\Resources\UserResource\Pages\ViewUser;
 use App\Filament\Resources\UserResource\Pages\ListUsers;
 use App\Filament\Resources\UserResource\Pages\CreateUser;
 use App\Filament\Resources\UserResource\RelationManagers;
+use App\Filament\Resources\UserResource\Widgets\UsersOverview;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
@@ -69,4 +70,12 @@ class UserResource extends Resource
             'view' => Pages\ViewUser::route('/{record}'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            UsersOverview::class,
+        ];
+    }
+
 }

@@ -11,14 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    
+    @livewireStyles
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    @livewireStyles
 </head>
 <body>
 
-    <nav class="flex justify-between items-center px-16 py-4">
+    <nav class="flex justify-between items-center px-11 lg:px-16 py-4">
       <div>
         <h1 class="text-main text-2xl font-medium">CPCI</h1>
       </div>
@@ -26,6 +26,7 @@
         <ul class="flex space-x-6 items-center">
           <li><a class="text-nav-links hover:text-main" href="{{ route('homepage') }}">Home</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('blogpage') }}">Blog</a></li>
+          <li><a class="text-nav-links hover:text-main" href="{{ route('eventspage') }}">Events</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('nextstepspage') }}">Next Steps</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('getinvolvedpage') }}">Get Involved</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('aboutpage') }}">About Us</a></li>
@@ -85,6 +86,10 @@
             </span>
 
             <span @click="isOpen = false">
+              <a class="text-nav-links hover:text-main" href="{{ route('eventspage') }}">Events</a>
+            </span>
+
+            <span @click="isOpen = false">
               <a class="text-nav-links hover:text-main" href="{{ route('nextstepspage') }}">Next Steps</a>
             </span>
 
@@ -118,8 +123,8 @@
     @yield('content')
 
     <footer>
-      <div class="bg-main py-20">
-        <div class="flex items-start justify-center space-x-56 text-white">
+      <div class="bg-main py-10 lg:py-20">
+        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-center space-y-10 lg:space-y-0 lg:space-x-56 text-white pl-8 lg:pl-0">
           <div>
             <h2 class="text-lg font-semibold mb-4">About Us</h2>
             <ul class="space-y-2">
@@ -176,7 +181,7 @@
       </div>  
     </footer>
 
-    <script src="{{ asset('js/app.js') }}"></script>
     @livewireScripts
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

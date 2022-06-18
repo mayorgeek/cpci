@@ -27,33 +27,35 @@ Our Blog - Christ Preachers Church International
 
 
     {{-- Main Content --}}
-    <div class="bg-gray-50 p-20 flex justify-between">
+    <div class="bg-gray-50 px-6 py-16 lg:p-20">
 
-        {{-- Left Side --}}
-        <div class="space-y-24">
-            {{-- Blog Posts --}}
-            @forelse ($posts as $post)
-                <div class="rounded-lg shadow-lg hover:shadow-2xl bg-white max-w-4xl">
-                    <div class="flex justify-center items-center">
-                        <a href="{{ route('blogdetailspage', ['slug' => $post->slug ]) }}">
-                            <img class="rounded-t-lg" src="{{ asset("storage/$post->post_pic") }}" alt="{{ $post->title }}" />
-                        </a>
+        <div class="flex justify-center">
+            {{-- Left Side --}}
+            <div class="space-y-24">
+                {{-- Blog Posts --}}
+                @forelse ($posts as $post)
+                    <div class="rounded-lg shadow-lg hover:shadow-2xl bg-white max-w-4xl">
+                        <div class="flex justify-center items-center">
+                            <a href="{{ route('blogdetailspage', ['slug' => $post->slug ]) }}">
+                                <img class="rounded-t-lg" src="{{ asset("storage/$post->post_pic") }}" alt="{{ $post->title }}" />
+                            </a>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="text-gray-900 text-xl font-medium mb-2">{{ $post->title }}</h5>
+                            <p class="text-gray-500 text-base font-light mb-4">
+                                
+                                {!! substr($post->body, 0, 200) . "..." !!}
+                            </p>
+                            <a href="{{ route('blogdetailspage', ['slug' => $post->slug ]) }}"
+                                class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</a>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h5 class="text-gray-900 text-xl font-medium mb-2">{{ $post->title }}</h5>
-                        <p class="text-gray-500 text-base font-light mb-4">
-                            
-                            {!! substr($post->body, 0, 150) . "..." !!}
-                        </p>
-                        <a href="{{ route('blogdetailspage', ['slug' => $post->slug ]) }}"
-                            class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</a>
-                    </div>
-                </div>
-                
-                
-            @empty
-                <h1 class="text-gray-800">Ooops! Sorry, No blog posts yet. Please check back soon.</h1>
-            @endforelse        
+                    
+                    
+                @empty
+                    <h1 class="text-gray-800">Ooops! Sorry, No blog posts yet. Please check back soon.</h1>
+                @endforelse        
+            </div>
         </div>
 
         {{-- Right Side --}}
@@ -108,6 +110,10 @@ Our Blog - Christ Preachers Church International
                 </div>
             </div>
         </div> --}}
+
+        <div class="mt-24 space-x-10 flex justify-center items-center">
+            {{ $posts->links() }}
+        </div>
 
     </div>
 

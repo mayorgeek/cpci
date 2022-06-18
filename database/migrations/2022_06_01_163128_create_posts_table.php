@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('post_pic')->nullable();
-            $table->json('metadata')->nullable();
-            $table->string('image')->nullable();
             $table->string('slug');
             $table->string('title');
             $table->text('body');
+            $table->string('summary');
             $table->timestamps();
             
             $table->string('posted_by');
