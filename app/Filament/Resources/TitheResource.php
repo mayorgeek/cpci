@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\TitheResource\Pages;
 use App\Filament\Resources\TitheResource\RelationManagers;
+use App\Filament\Resources\TitheResource\Widgets\TitheChart;
 use App\Models\Tithe;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -56,4 +57,12 @@ class TitheResource extends Resource
             'index' => Pages\ListTithes::route('/'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            TitheChart::class,
+        ];
+    }
+
 }
