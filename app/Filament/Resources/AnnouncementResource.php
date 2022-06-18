@@ -4,8 +4,10 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\AnnouncementResource\Pages;
 use App\Filament\Resources\AnnouncementResource\RelationManagers;
+use App\Filament\Resources\AnnouncementResource\Widgets\AnnouncementOverview;
 use App\Models\Announcement;
 use Filament\Forms;
+use Filament\Forms\Components\Card;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -21,12 +23,14 @@ class AnnouncementResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('content')
-                    ->required()
-                    ->maxLength(255),
+                Card::make([
+                    Forms\Components\TextInput::make('title')
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\RichEditor::make('content')
+                        ->required()
+                        ->maxLength(255),
+                ]),
             ]);
     }
 
@@ -36,10 +40,7 @@ class AnnouncementResource extends Resource
             ->columns([
                 Tables\Columns\TagsColumn::make('branch'),
                 Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('content'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
             ])
             ->filters([
@@ -60,6 +61,15 @@ class AnnouncementResource extends Resource
             'index' => Pages\ListAnnouncements::route('/'),
             'create' => Pages\CreateAnnouncement::route('/create'),
             'edit' => Pages\EditAnnouncement::route('/{record}/edit'),
+            'view' => Pages\ViewAnnouncement::route('/{record}'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            AnnouncementOverview::class,
+        ];
+    }
+
 }
