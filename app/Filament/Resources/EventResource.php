@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
 use App\Filament\Resources\EventResource\Pages;
 use App\Filament\Resources\EventResource\RelationManagers;
+use App\Filament\Resources\EventResource\Widgets\EventsOverview;
 
 class EventResource extends Resource
 {
@@ -78,4 +79,12 @@ class EventResource extends Resource
             'edit' => Pages\EditEvent::route('/{record}/edit'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            EventsOverview::class,
+        ];
+    }
+
 }
