@@ -32,7 +32,7 @@ class UserLogsResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('user_id'),
+                TextColumn::make('username'),
                 TextColumn::make('login_date')
                     ->dateTime(),
                 TextColumn::make('logout_date')
