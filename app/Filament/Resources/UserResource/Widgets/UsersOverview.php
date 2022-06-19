@@ -11,7 +11,9 @@ class UsersOverview extends BaseWidget
     protected function getCards(): array
     {
         return [
-            Card::make('Users', User::count()),
+            Card::make('Members', User::query()->where('role', 'member')->count()),
+            Card::make('Secretaries', User::query()->where('role', 'secetary')->count()),
+            Card::make('Pastors', User::query()->where('role', 'pastor')->count()),
         ];
     }
 }

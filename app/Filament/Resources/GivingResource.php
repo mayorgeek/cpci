@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\GivingResource\Pages;
 use App\Filament\Resources\GivingResource\RelationManagers;
+use App\Filament\Resources\GivingResource\Widgets\GivingChart;
 use App\Models\Giving;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -56,4 +57,12 @@ class GivingResource extends Resource
             'index' => Pages\ListGivings::route('/'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            GivingChart::class,
+        ];
+    }
+
 }

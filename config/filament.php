@@ -3,6 +3,7 @@
 use App\Filament\Resources\AnnouncementResource\Widgets\AnnouncementOverview;
 use App\Filament\Resources\BranchResource\Widgets\BranchOverview;
 use App\Filament\Resources\EventResource\Widgets\EventsOverview;
+use App\Filament\Resources\GivingResource\Widgets\GivingChart;
 use App\Filament\Resources\OfferingResource\Widgets\OfferingChart;
 use App\Filament\Resources\PostResource\Widgets\PostsOverview;
 use App\Filament\Resources\TitheResource\Widgets\TitheChart;
@@ -150,13 +151,14 @@ return [
         'path' => app_path('Filament/Widgets'),
         'register' => [
             Widgets\AccountWidget::class,
-            AnnouncementOverview::class,
-            BranchOverview::class,
-            EventsOverview::class,
-            PostsOverview::class,
             UsersOverview::class,
+            PostsOverview::class,
+            AnnouncementOverview::class,
+            EventsOverview::class,
+            BranchOverview::class,
             OfferingChart::class,
             TitheChart::class,
+            GivingChart::class,
             // Widgets\FilamentInfoWidget::class,
         ],
     ],
