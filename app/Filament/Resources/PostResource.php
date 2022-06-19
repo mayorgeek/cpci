@@ -14,6 +14,7 @@ use phpDocumentor\Reflection\Types\Callable_;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
 use App\Filament\Resources\PostResource\Widgets\CommentOverview;
+use App\Filament\Resources\PostResource\Widgets\CommentsOverview;
 use App\Filament\Resources\PostResource\Widgets\PostsOverview;
 
 class PostResource extends Resource
@@ -45,23 +46,8 @@ class PostResource extends Resource
                         ->maxLength(200)
                         ->disableAllToolbarButtons(),
                     Forms\Components\RichEditor::make('body')
-                    ->toolbarButtons([
-                        'attachFiles',
-                        'blockquote',
-                        'bold',
-                        'bulletList',
-                        'codeBlock',
-                        'h2',
-                        'h3',
-                        'italic',
-                        'link',
-                        'orderedList',
-                        'redo',
-                        'strike',
-                        'undo',
-                    ])
-                    ->fileAttachmentsDirectory('blog/attachements')
-                    ->required(),
+                        ->fileAttachmentsDirectory('blog/attachements')
+                        ->required(),
                 ]),
             ]);
     }
@@ -71,13 +57,8 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('posted_by'),
-                // Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('title'),
-                // Tables\Columns\TextColumn::make('body')
-                //     ->html(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
             ])
             ->filters([
@@ -106,6 +87,7 @@ class PostResource extends Resource
     {
         return [
             PostsOverview::class,
+            CommentsOverview::class,
         ];
     }
 }
