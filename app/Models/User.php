@@ -48,10 +48,6 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
         'email_verified_at' => 'datetime',
     ];
 
-    public function userLogs(): HasMany {
-        return $this->hasMany(UserLog::class, 'user_id', 'id');
-    }
-
     
     public function canAccessFilament(): bool
     {

@@ -15,6 +15,8 @@ class EditAnnouncement extends EditRecord
     {
         ActivityLog::create([
             'username' => Auth::user()->name,
+            'affected_resource' => 'announcement',
+            'affected_resource_id' => $this->record->id,
             'action' => 'Edited an announcement',
         ]);
     }

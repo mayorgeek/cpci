@@ -21,6 +21,8 @@ class CreatePost extends CreateRecord
     protected function afterCreate(): void {
         ActivityLog::create([
             'username' => Auth::user()->name,
+            'affected_resource' => 'post',
+            'affected_resource_id' => $this->record->id,
             'action' => 'Created a blog post'
         ]);
     }

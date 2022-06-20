@@ -34,6 +34,8 @@ class ActivityLogsResource extends Resource
             ->columns([
                 TextColumn::make('username'),
                 TextColumn::make('action'),
+                TextColumn::make('affected_resource'),
+                TextColumn::make('affected_resource_id'),
                 TextColumn::make('created_at')
                     ->dateTime(),
             ])

@@ -15,6 +15,8 @@ class CreateEvent extends CreateRecord
     {
         ActivityLog::create([
             'username' => Auth::user()->name,
+            'affected_resource' => 'event',
+            'affected_resource_id' => $this->record->id,
             'action' => "Created an event"
         ]);
     }

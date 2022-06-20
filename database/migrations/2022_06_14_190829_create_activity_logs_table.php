@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('activity_logs', function (Blueprint $table) {
             $table->id();
             $table->string('username');
+            $table->string('affected_resource');
+            $table->unsignedBigInteger('affected_resource_id');
             $table->string('action');
             $table->timestamps();
         });

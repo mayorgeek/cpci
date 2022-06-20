@@ -15,6 +15,8 @@ class EditEvent extends EditRecord
     {
         ActivityLog::create([
             'username' => Auth::user()->name,
+            'affected_resource' => 'event',
+            'affected_resource_id' => $this->record->id,
             'action' => 'Edited an event',
         ]);
     }

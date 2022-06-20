@@ -15,6 +15,8 @@ class EditUser extends EditRecord
     {
         ActivityLog::create([
             'username' => Auth::user()->name,
+            'affected_resource' => 'user',
+            'affected_resource_id' => $this->record->id,
             'action' => 'Edited User Profile',
         ]);
     }
