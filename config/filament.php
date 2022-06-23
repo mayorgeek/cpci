@@ -2,6 +2,7 @@
 
 use App\Filament\Resources\AnnouncementResource\Widgets\AnnouncementOverview;
 use App\Filament\Resources\BranchResource\Widgets\BranchOverview;
+use App\Filament\Resources\EmailSubscriberResource\Widgets\EmailSubscribersOverview;
 use App\Filament\Resources\EventResource\Widgets\EventsOverview;
 use App\Filament\Resources\GivingResource\Widgets\GivingChart;
 use App\Filament\Resources\OfferingResource\Widgets\OfferingChart;
@@ -155,6 +156,7 @@ return [
             PostsOverview::class,
             AnnouncementOverview::class,
             EventsOverview::class,
+            EmailSubscribersOverview::class,
             BranchOverview::class,
             OfferingChart::class,
             TitheChart::class,

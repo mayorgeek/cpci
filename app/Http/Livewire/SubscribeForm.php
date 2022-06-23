@@ -2,11 +2,12 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\EmailSubscriber;
 use Livewire\Component;
+
 
 class SubscribeForm extends Component
 {
-
     public $name;
     public $email;
 
@@ -15,8 +16,11 @@ class SubscribeForm extends Component
         return view('livewire.subscribe-form');
     }
 
-    public function subscribeEmail() {
-        
+    public function subscribeEmail(): void {
+        EmailSubscriber::create([
+            'name' => $this->name,
+            'email' => $this->email,
+        ]);
     }
 
 }

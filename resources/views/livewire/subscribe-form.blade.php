@@ -1,10 +1,10 @@
 <div class="mt-20">
     <h1 class="text-white text-4xl font-semibold text-center">Stay In Touch</h1>
     <div class="flex justify-center mt-8">
-      <form wire:click.prevent="subscribeEmail">
+      <form wire:submit.prevent="subscribeEmail">
         <div class="mb-5 xl:w-96">
           <input
-            wire:model="name"
+            wire:model.lazy="name"
             type="text"
             class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             id="name"
@@ -14,7 +14,7 @@
 
         <div class="mb-5 xl:w-96">
           <input
-            wire:model="email"
+            wire:model.lazy="email"
             type="email"
             class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             id="email"
