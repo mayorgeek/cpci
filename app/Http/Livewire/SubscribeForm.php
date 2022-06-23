@@ -21,6 +21,9 @@ class SubscribeForm extends Component
             'name' => $this->name,
             'email' => $this->email,
         ]);
+
+        $this->name = '';
+        $this->email = '';
     }
 
 }

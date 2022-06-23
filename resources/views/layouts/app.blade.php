@@ -14,8 +14,6 @@
     
     @livewireStyles
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
-    @include('sweetalert::alert')
 </head>
 <body>
 
