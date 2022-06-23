@@ -8,11 +8,17 @@ use Filament\Widgets\StatsOverviewWidget\Card;
 
 class UsersOverview extends BaseWidget
 {
+
+    public static function canView(): bool
+    {
+        return auth()->user()->isAdmin();
+    }
+
     protected function getCards(): array
     {
         return [
             Card::make('Members', User::query()->where('role', 'member')->count()),
-            Card::make('Secretaries', User::query()->where('role', 'secetary')->count()),
+            Card::make('Secretaries', User::query()->where('role', 'secretary')->count()),
             Card::make('Pastors', User::query()->where('role', 'pastor')->count()),
         ];
     }

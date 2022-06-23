@@ -13,6 +13,11 @@ class GivingChart extends LineChartWidget
 
     protected int | string | array $columnSpan = 'full';
 
+    public static function canView(): bool
+    {
+        return auth()->user()->isAdmin();
+    }
+
     protected function getData(): array
     {
         $data = Trend::model(Giving::class)

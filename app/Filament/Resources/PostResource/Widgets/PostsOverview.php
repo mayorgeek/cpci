@@ -8,6 +8,16 @@ use Filament\Widgets\StatsOverviewWidget\Card;
 
 class PostsOverview extends BaseWidget
 {
+    public static function canView(): bool
+    {
+        if (auth()->user()->isMember())
+        {
+            return false;
+        }
+
+        return true;
+    }
+
     protected function getCards(): array
     {
         return [

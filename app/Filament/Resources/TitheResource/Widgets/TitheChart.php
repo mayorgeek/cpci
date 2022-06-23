@@ -13,6 +13,16 @@ class TitheChart extends LineChartWidget
 
     protected int | string | array $columnSpan = 'full';
 
+    public static function canView(): bool
+    {
+        if (auth()->user()->isMember())
+        {
+            return false;
+        }
+
+        return true;
+    }
+
     protected function getData(): array
     {
         $data = Trend::model(Tithe::class)

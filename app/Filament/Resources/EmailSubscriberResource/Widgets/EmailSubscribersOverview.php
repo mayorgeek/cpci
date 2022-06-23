@@ -8,6 +8,12 @@ use Filament\Widgets\StatsOverviewWidget\Card;
 
 class EmailSubscribersOverview extends BaseWidget
 {
+
+    public static function canView(): bool
+    {
+        return auth()->user()->isAdmin();
+    }
+
     protected function getCards(): array
     {
         return [

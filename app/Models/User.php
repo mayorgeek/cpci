@@ -9,7 +9,6 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Support\Facades\URL;
 
 class User extends Authenticatable implements FilamentUser, HasAvatar
 {
@@ -54,6 +53,26 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
         }
 
         return null;
+    }
+
+    public function isMember(): bool
+    {
+        return $this->role == 'member';
+    }
+
+    public function isSecretary(): bool
+    {
+        return $this->role == 'secretary';
+    }
+
+    public function isPastor(): bool
+    {
+        return $this->role == 'pastor';
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role == 'admin';
     }
 
 }
