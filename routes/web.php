@@ -4,7 +4,10 @@ use App\Http\Livewire\Blog;
 use App\Http\Livewire\BlogDetails;
 use App\Http\Livewire\EventDetails;
 use App\Http\Livewire\Events;
+use App\Http\Livewire\GivingPage;
+use App\Http\Livewire\OfferingPage;
 use App\Http\Livewire\RegisterPage;
+use App\Http\Livewire\TithePage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,9 +48,11 @@ Route::get('/register-page', function () {
 // Route::get('/register-page', RegisterPage::class)->name('registerpage');
 
 Route::get('/blog', Blog::class)->name('blogpage');
-
 Route::get('/blog/{slug}', BlogDetails::class)->name('blogdetailspage');
 
 Route::get('/events', Events::class)->name('eventspage');
-
 Route::get('/event/{slug}', EventDetails::class)->name('eventdetailspage');
+
+Route::get('/giving', GivingPage::class)->name('givingpage');
+Route::get('/offering', OfferingPage::class)->name('offeringpage');
+Route::get('/tithe', TithePage::class)->name('tithespage');

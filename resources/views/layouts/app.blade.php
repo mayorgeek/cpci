@@ -32,6 +32,65 @@
           <li><a class="text-nav-links hover:text-main" href="{{ route('aboutpage') }}">About Us</a></li>
           <li><a class="text-nav-links hover:text-main" href="{{ route('contactpage') }}">Contact</a></li>
 
+          <li>
+            <div class="dropdown relative">
+              <a
+                href="#"
+                class="dropdown-toggle text-nav-links hover:text-main flex space-x-2"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="caret-down"
+                  class="w-2 ml-2"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                  ></path>
+                </svg>
+              </a>
+              <ul
+                class="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a
+                    class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:text-white hover:bg-main"
+                    href="{{ route('givingpage') }}"
+                  >
+                    Giving
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:text-white hover:bg-main"
+                    href="{{ route('offeringpage') }}"
+                  >
+                    Offering
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:text-white hover:bg-main"
+                    href="{{ route('tithespage') }}"
+                  >
+                    Tithe
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
           @guest
             <a href="{{ route('registerpage') }}" class="px-6 py-2.5 bg-gray-100 text-main font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 active:shadow-lg transition duration-150 ease-in-out">Register</a>
             <a href="{{ route('filament.auth.login') }}" class="px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-main active:shadow-lg transition duration-150 ease-in-out">Login</a>            
@@ -40,6 +99,8 @@
         </ul>
       </div>
 
+
+      {{-- Moblie Navigation --}}
       <div x-data="{ 
         message: 'good',
         isOpen: false,
@@ -103,6 +164,56 @@
 
             <span @click="isOpen = false">
               <a class="text-nav-links hover:text-main" href="{{ route('contactpage') }}">Contact</a>
+            </span>
+
+            <span>
+              <a
+                href="#collapseExample" 
+                class="text-nav-links hover:text-main flex space-x-2"
+                type="button"
+                data-bs-toggle="collapse" 
+                role="button" 
+                aria-expanded="false" 
+                aria-controls="collapseExample"
+              >
+                More
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="caret-down"
+                  class="w-2 ml-2"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                  ></path>
+                </svg>
+              </a>
+
+                <div class="collapse py-3 space-y-2" id="collapseExample">
+                      <a
+                        class="block text-nav-links hover:text-main"
+                        href="{{ route('givingpage') }}"
+                      >
+                        Giving
+                      </a>
+                      <a
+                        class="block text-nav-links hover:text-main"
+                        href="{{ route('offeringpage') }}"
+                      >
+                        Offering
+                      </a>
+                      <a
+                        class="block text-nav-links hover:text-main"
+                        href="{{ route('tithespage') }}"
+                      >
+                        Tithe
+                      </a>
+                </div>
             </span>
 
             @guest

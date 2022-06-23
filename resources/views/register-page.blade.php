@@ -7,7 +7,7 @@ Register an Account - Christ Preachers International Church
 @section('content')
 <div>
 
-    <div class="p-20 flex justify-center bg-gray-100">
+    <div class="px-8 py-20 lg:p-20 flex justify-center bg-gray-100">
         @livewire('registration-form')
     </div>
 

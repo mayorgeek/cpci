@@ -6679,6 +6679,9 @@ textarea.form-control.is-invalid{
 .-mr-6{
   margin-right: -1.5rem;
 }
+.mt-1{
+  margin-top: 0.25rem;
+}
 .block{
   display: block;
 }
@@ -6873,11 +6876,19 @@ textarea.form-control.is-invalid{
 .w-80{
   width: 20rem;
 }
+.w-2{
+  width: 0.5rem;
+}
 .min-w-0{
   min-width: 0px;
 }
 .min-w-\[2rem\]{
   min-width: 2rem;
+}
+.min-w-max{
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .max-w-4xl{
   max-width: 56rem;
@@ -7032,6 +7043,9 @@ textarea.form-control.is-invalid{
 }
 .resize{
   resize: both;
+}
+.list-none{
+  list-style-type: none;
 }
 .appearance-none{
   -webkit-appearance: none;
@@ -7355,6 +7369,9 @@ textarea.form-control.is-invalid{
 }
 .border-solid{
   border-style: solid;
+}
+.border-none{
+  border-style: none;
 }
 .border-main{
   --tw-border-opacity: 1;
@@ -8321,6 +8338,11 @@ textarea.form-control.is-invalid{
 .hover\:bg-warning-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(202 138 4 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-main:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 68 242 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-opacity-5:hover{
