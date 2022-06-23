@@ -41,10 +41,10 @@ class PostResource extends Resource
                     Forms\Components\TextInput::make('slug')
                         ->required()
                         ->maxLength(255),
-                    Forms\Components\RichEditor::make('summary')
+                    Forms\Components\Textarea::make('summary')
                         ->required()
                         ->maxLength(200)
-                        ->disableAllToolbarButtons(),
+                        ->rows(3),
                     Forms\Components\RichEditor::make('body')
                         ->fileAttachmentsDirectory('blog/attachements')
                         ->required(),

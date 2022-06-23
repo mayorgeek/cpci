@@ -25,12 +25,17 @@
             </span>    
         </div>        
 
-        <div class="mt-12">
-            <img class="rounded-md" src="{{ asset("storage/$event->event_pic") }}" alt="{{ $event->title }}">
+        <div class="mt-12 mb-16">
+            <img class="rounded-md w-full" src="{{ asset("storage/$event->event_pic") }}" alt="{{ $event->title }}">
         </div>
+        
+
+        {{-- Youtube Video Frame --}}
+        <iframe class="w-full" width="560" height="560" src="{{ $event->event_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
         {{-- Main Blog event Content --}}
-        <div class="my-20">
+        <div class="w-full my-20">
             {!! $event->content !!}
         </div>
 

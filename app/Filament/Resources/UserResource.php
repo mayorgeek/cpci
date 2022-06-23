@@ -21,6 +21,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Support\Facades\Auth;
 
 class UserResource extends Resource
 {
@@ -41,20 +42,21 @@ class UserResource extends Resource
                     TextInput::make('email'),
                     Select::make('role')
                         ->options([
-                            'member',
-                            'secretary',
-                            'pastor',
-                            'admin'
-                        ]),
+                            'member' => 'Member',
+                            'secretary' => 'Secretary',
+                            'pastor' => 'Pastor',
+                            'admin' => 'Admin'
+                        ])
+                        ->disabled(fn () => Auth::user()->role == 'member' ),
                     TextInput::make('phone'),
                     Select::make('branch')
-                        ->options(Branch::all()),
+                        ->options(Branch::all()->pluck('name', 'id')),
                     Select::make('fellowship')
                         ->options([
-                            'teens',
-                            'youths',
-                            'women',
-                            'men'
+                            'teens' => 'Teens',
+                            'youths' => 'Youths',
+                            'women' => 'Women',
+                            'men' => 'Men'
                         ]),
                 ]),
             ]);

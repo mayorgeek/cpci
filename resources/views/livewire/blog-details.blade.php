@@ -42,19 +42,15 @@
         </div>
 
         {{-- Comments Section --}}
-        <div x-data>
-            <h1 x-text="$wire.test">ouch</h1>
+        <div>
             <h2 class="text-gray-900 text-xl mb-6">Leave a comment</h2>
 
             {{-- Comment Box --}}
             <div class="mb-8 w-full">
-                {{-- <textarea
-                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none" 
-                    id="commentBox" rows="3" placeholder="Join the discussion and leave a comment!">
-                </textarea> --}}
-
                 <form wire:submit.prevent="postComment">
                     {{ $this->form }}
+
+                    <button wire:click='postComment' type="button" class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Submit</button>
                 </form>
             </div>
 
