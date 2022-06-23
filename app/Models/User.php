@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\URL;
 
 class User extends Authenticatable implements FilamentUser, HasAvatar
 {
@@ -49,7 +50,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
     public function getFilamentAvatarUrl(): ?string
     {
         if ($this->profile_pic) {
-            return "storage/" . $this->profile_pic;
+            return URL::to('/') . "storage/" . $this->profile_pic;
         }
 
         return null;
