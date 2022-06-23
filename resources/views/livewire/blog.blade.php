@@ -16,8 +16,8 @@ Our Blog - Christ Preachers Church International
             style="background-color: rgba(43, 41, 41, 0.37);">
             <div class="flex justify-center items-center h-full">
                 <div>
-                    <h2 class="font-normal text-6xl mb-4 text-white opacity-95">Our Blog</h2>
-                    <p class="w-[748px] font-light text-xl text-white opacity-95 mb-10 mt-2">Lorem ipsum dolor sit amet,
+                    <h2 class="font-normal text-4xl lg:text-6xl mb-4 text-white opacity-95">Our Blog</h2>
+                    <p class="lg:w-[748px] font-light text-xl text-white opacity-95 mb-10 mt-2">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit.</p>
                 </div>
             </div>

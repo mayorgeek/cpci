@@ -114,7 +114,7 @@
                     aria-label="Select Your Fellowship Group">
                     <option selected>Select Your Fellowship Group</option>
                     <option value="teens">Teens</option>
-                    <option value="youth fellowship">Youths</option>
+                    <option value="youths">Youths</option>
                     <option value="women">Women</option>
                     <option value="men">Men</option>
                 </select>

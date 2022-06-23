@@ -105,13 +105,15 @@
               <a class="text-nav-links hover:text-main" href="{{ route('contactpage') }}">Contact</a>
             </span>
 
-            <span @click="isOpen = false">
-              <a class="text-nav-links hover:text-main" href="{{ route('registerpage') }}">Register</a>
-            </span>
+            @guest
+              <span @click="isOpen = false">
+                <a class="text-nav-links hover:text-main" href="{{ route('registerpage') }}">Register</a>
+              </span>
 
-            <span @click="isOpen = false">
-              <a href="{{ route('filament.auth.login') }}" class="px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-main active:shadow-lg transition duration-150 ease-in-out">Login</a>            
-            </span>
+              <span @click="isOpen = false">
+                <a href="{{ route('filament.auth.login') }}" class="px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-main active:shadow-lg transition duration-150 ease-in-out">Login</a>            
+              </span>
+            @endguest
 
           </div>
 
@@ -177,7 +179,7 @@
       </div>
 
       <div class="bg-white py-2">
-        <p class="text-center text-[#332E2E]">Copyright 2021. All rights reserved.</p>
+        <p class="text-center text-[#332E2E]">&copy; Copyright 2021. All rights reserved.</p>
       </div>  
     </footer>
 

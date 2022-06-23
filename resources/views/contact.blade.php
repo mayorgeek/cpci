@@ -16,10 +16,10 @@ Contact - Christ Preachers Church International
             style="background-color: rgba(43, 41, 41, 0.37);">
             <div class="flex justify-center items-center h-full">
                 <div>
-                    <h2 class="font-normal text-6xl mb-4 text-white opacity-95">Contact CPCI</h2>
-                    <p class="w-[748px] font-light text-xl text-white opacity-95 mb-10 mt-2">Lorem ipsum dolor sit amet,
+                    <h2 class="font-normal text-4xl lg:text-6xl mb-4 text-white opacity-95">Contact CPCI</h2>
+                    <p class="lg:w-[748px] font-light text-xl text-white opacity-95 mb-10 mt-2">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit.</p>
-                    <div class="flex space-x-6 justify-center">
+                    <div class="flex flex-col items-center space-y-6 lg:space-y-0 lg:flex-row lg:space-x-6 lg:justify-center">
                         <a class="inline-block px-6 py-3 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                             href="#!" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">FILL OUT A
                             CONNECTION CARD?</a>
@@ -37,23 +37,23 @@ Contact - Christ Preachers Church International
 
     {{-- Info Card Section --}}
     <div
-        class="bg-[#1E85FF] py-20 shadow-2xl w-[1240px] h-[597px] flex flex-col justify-center items-center mt-24 mx-auto">
+        class="bg-[#1E85FF] py-20 shadow-2xl lg:w-[1240px] h-[597px] flex flex-col justify-center items-center mt-24 mx-auto">
         <h3 class="text-white text-center opacity-95 font-light text-base uppercase">Get In Touch</h3>
-        <h1 class="text-white text-center font-light text-4xl capitalize mt-6">Contact & Visiting Info</h1>
-        <div class="flex justify-center space-x-28 mt-12">
+        <h1 class="text-white text-center font-light text-3xl lg:text-4xl capitalize mt-6">Contact & Visiting Info</h1>
+        <div class="flex flex-col space-y-8 lg:space-y-0 lg:flex-row lg:justify-center lg:space-x-28 mt-12">
             <div>
-                <h2 class="text-white font-medium text-2xl">Worship Gatherings</h2>
+                <h2 class="text-white font-medium text-lg lg:text-2xl">Worship Gatherings</h2>
                 <p class="text-[#E5E5E5] font-light text-base uppercase mt-6">1234 CPCI ST. SAN FRANCISCO, CA 93513</p>
                 <p class="text-[#E5E5E5] font-light text-base uppercase mt-4">THUR & SUN @ 5:30PM & 7:30PM</p>
             </div>
 
             <div>
-                <h2 class="text-white font-medium text-2xl">Mailing Address</h2>
+                <h2 class="text-white font-medium text-lg lg:text-2xl">Mailing Address</h2>
                 <p class="text-[#E5E5E5] font-light text-base uppercase mt-6">1234 CPCI ST. SAN FRANCISCO, CA 93513</p>
             </div>
 
             <div>
-                <h2 class="text-white font-medium text-2xl">Phone & Email</h2>
+                <h2 class="text-white font-medium text-lg lg:text-2xl">Phone & Email</h2>
                 <p class="text-[#E5E5E5] font-light text-base uppercase mt-6">(234) 905-907-0371</p>
                 <p class="text-[#E5E5E5] font-light text-base uppercase mt-4">cpci@gmail.com</p>
             </div>
@@ -62,11 +62,10 @@ Contact - Christ Preachers Church International
 
 
     {{-- Cards Section --}}
-    <div class="p-20 mt-10 grid grid-cols-4">
-        <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
+    <div class="py-20 px-6 lg:p-20 mt-10 grid grid-cols-1 lg:grid-cols-4">
+        <div class="lg:w-[310px] p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
         background-image: url('{{ asset('images/our-blog.jpg') }}');
         height: 320px;
-        width: 310px;
         ">
             <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed flex justify-center items-center"
                 style="background-color: rgba(30, 133, 255, 0.58)">
@@ -75,10 +74,9 @@ Contact - Christ Preachers Church International
 
         </div>
 
-        <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
+        <div class="lg:w-[310px] p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
         background-image: url('{{ asset('images/live-stream.jpg') }}');
         height: 320px;
-        width: 310px;
         ">
             <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed flex justify-center items-center"
                 style="background-color: rgba(80, 74, 74, 0.48)">
@@ -87,17 +85,15 @@ Contact - Christ Preachers Church International
 
         </div>
 
-        <div class="bg-white p-12 flex justify-center items-center text-center overflow-hidden shadow-xl" style="
+        <div class="bg-white lg:w-[310px] p-12 flex justify-center items-center text-center overflow-hidden shadow-xl" style="
         height: 320px;
-        width: 310px;
         ">
             <h2 class="text-[#2B2929] font-light text-xl capitalize">Plan a Visit</h2>
         </div>
 
-        <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
+        <div class="lg:w-[310px] p-12 text-center relative overflow-hidden bg-no-repeat bg-cover shadow-xl" style="
         background-image: url('{{ asset('images/give.jpg') }}');
         height: 320px;
-        width: 310px;
         ">
             <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed flex justify-center items-center"
                 style="background-color: rgba(10, 25, 64, 0.87)">
@@ -109,7 +105,9 @@ Contact - Christ Preachers Church International
     </div>
 
     {{-- Contact Form Section --}}
-    @livewire('contact-form')
+    <div class="px-6">
+        @livewire('contact-form')
+    </div>
 
 </div>
 @endsection

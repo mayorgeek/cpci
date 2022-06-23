@@ -9,39 +9,39 @@ Christ Preachers Church International
 
         {{-- Hero Section --}}
         <div>
-            <img class="h-[749px] w-full" src="{{ asset('images/jesus-hero-image.jpg') }}" alt="Hero Image">
+            <img class="h-[540px] lg:h-[749px] w-full" src="{{ asset('images/jesus-hero-image.jpg') }}" alt="Hero Image">
         </div>
 
         {{-- About Us Section --}}
-        <div class="py-14 px-16">
+        <div class="py-14 px-8 lg:px-16">
             <h1 class="text-[#332E2E] font-medium text-3xl text-center">About Us</h1>
-            <div class="mt-10 grid grid-cols-2 gap-x-10">
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-x-10">
                 <div>
-                    <img class="rounded-md" src="{{ asset('images/about-us-section-image.jpg') }}" alt="About Us Section Image">
+                    <img class="rounded-md shadow-lg lg:shadow-none" src="{{ asset('images/about-us-section-image.jpg') }}" alt="About Us Section Image">
                 </div>
 
-                <div class="flex flex-col justify-center">
+                <div class="flex flex-col justify-center mt-8 lg:mt-0">
                     <p class="font-normal text-lg text-[#2B2929]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae cras libero, feugiat sit lacus, egestas dui. Volutpat nulla amet senectus lectus aliquet nullam.
                     </p>
-                    <button type="button" class="w-1/5 inline-block mt-8 px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button>
+                    <a href="{{ route('aboutpage') }}" class="w-fit lg:w-1/5 inline-block mt-8 px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</a>
                 </div>
             </div>
         </div>
 
         {{-- Church Events --}}
-        <div class="py-14 px-16">
+        <div class="py-14 px-10 lg:px-16">
             <h1 class="text-[#332E2E] font-medium text-3xl text-center">Church Events</h1>
-            <div class="mt-10 grid grid-cols-2 gap-x-10">
-                <div class="flex flex-col justify-center">
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-x-10">
+                <div class="flex flex-col justify-center mt-8 lg:mt-0 order-2">
                     <p class="font-normal text-lg text-[#2B2929]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae cras libero, feugiat sit lacus, egestas dui. Volutpat nulla amet senectus lectus aliquet nullam.
                     </p>
-                    <button type="button" class="w-1/5 inline-block mt-8 px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button>
+                    <a href="{{ route('contactpage') }}" class="w-fit lg:w-1/5 inline-block mt-8 px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</a>
                 </div>
 
                 <div>
-                    <img class="rounded-md" src="{{ asset('images/church-events-section-image.jpg') }}" alt="About Us Section Image">
+                    <img class="rounded-md shadow-lg lg:shadow-none" src="{{ asset('images/church-events-section-image.jpg') }}" alt="About Us Section Image">
                 </div>
             </div>
         </div>
@@ -52,9 +52,9 @@ Christ Preachers Church International
                           background-size: cover;
                           background-postion: center;
                           height: 574px;" 
-                class="flex items-center justify-center mt-14">
-            <div>
-                <p class="italic font-light text-3xl text-center text-white opacity-95">
+                class="flex items-center justify-center mt-14 h-96">
+            <div class="px-6">
+                <p class="italic font-light text-xl lg:text-3xl text-center text-white opacity-95">
                     “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet magna lorem lacus et metus. Volutpat hendrerit mattis enim at vitae quam. Non at tellus nisl ac mi. “
                 </p>
                 <h3 class="text-black text-3xl font-light italic text-center mt-8">John 3:16 (KJV)</h3>
@@ -62,7 +62,7 @@ Christ Preachers Church International
         </div>
 
         {{-- Testimonies Section --}}
-        <div class="py-20 bg-[#FBFBFB]">
+        <div class="px-6 lg:px-0 py-20 bg-[#FBFBFB]">
             <div>
                 <h1 class="text-[#332E2E] font-medium text-3xl text-center">Testimonies</h1>
                 <p class="text-[#716E6E] font-light italic text-lg text-center mt-2">see what the lord has done for us...</p>

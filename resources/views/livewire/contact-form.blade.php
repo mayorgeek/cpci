@@ -1,4 +1,4 @@
-<div class="p-12 rounded-lg shadow-xl bg-white max-w-3xl mt-10 mb-20 mx-auto">
+<div class="p-8 lg:p-12 rounded-lg shadow-xl bg-white max-w-3xl mt-10 mb-20 mx-auto">
     <h1 class="text-[#2B2929] text-center text-2xl font-light mb-10">Send Us a Message</h1>
     <form wire:submit.prevent="sendMessage">
         <div class="form-group mb-8">
