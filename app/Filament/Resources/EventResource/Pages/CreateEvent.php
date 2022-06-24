@@ -11,6 +11,13 @@ class CreateEvent extends CreateRecord
 {
     protected static string $resource = EventResource::class;
 
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['uploaded_by'] = auth()->user()->name;
+    
+        return $data;
+    }
+
     protected function afterCreate(): void
     {
         ActivityLog::create([

@@ -27,7 +27,8 @@ class EventResource extends Resource
                 Card::make([
                     Forms\Components\FileUpload::make('event_pic')
                         ->image()
-                        ->columnSpan('full'),
+                        ->columnSpan('full')
+                        ->directory('events/event-pics'),
                     Forms\Components\TextInput::make('title')
                         ->required()
                         ->maxLength(255)
@@ -36,9 +37,9 @@ class EventResource extends Resource
                     Forms\Components\TextInput::make('slug')
                         ->required()
                         ->maxLength(255),
-                    Forms\Components\TextInput::make('content')
+                    Forms\Components\RichEditor::make('content')
                         ->required()
-                        ->maxLength(255),
+                        ->fileAttachmentsDirectory('events/content-attachment-pics'),
                     Forms\Components\TextInput::make('event_link')
                         ->url()
                         ->hint("Youtube video link for the event"),
@@ -53,7 +54,6 @@ class EventResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('content'),
                 Tables\Columns\TextColumn::make('scheduled_time')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('created_at')
