@@ -10,6 +10,7 @@ class SubscribeForm extends Component
 {
     public $name;
     public $email;
+    public $subscriptionSuccessful;
 
     public function render()
     {
@@ -22,6 +23,7 @@ class SubscribeForm extends Component
             'email' => $this->email,
         ]);
 
+        $this->subscriptionSuccessful = true;
         $this->name = '';
         $this->email = '';
     }
