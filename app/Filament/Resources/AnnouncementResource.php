@@ -27,9 +27,10 @@ class AnnouncementResource extends Resource
                     Forms\Components\TextInput::make('title')
                         ->required()
                         ->maxLength(255),
-                    Forms\Components\RichEditor::make('content')
+                    Forms\Components\Textarea::make('content')
                         ->required()
-                        ->maxLength(255),
+                        ->maxLength(255)
+                        ->rows(3),
                 ]),
             ]);
     }

@@ -72,6 +72,8 @@ class UserResource extends Resource
                 TextColumn::make('phone'),
                 TextColumn::make('branch'),
                 TextColumn::make('fellowship'),
+                TextColumn::make('created_at')
+                    ->dateTime(),
             ])
             ->filters([
                 //
