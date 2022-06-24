@@ -20,8 +20,15 @@ class PostsOverview extends BaseWidget
 
     protected function getCards(): array
     {
+        if (auth()->user()->isAdmin())
+        {
+            return [
+                Card::make('Posts', Post::count()),
+            ];    
+        }
+
         return [
-            Card::make('Posts', Post::count()),
+            Card::make('Posts', Post::where('posted_by', auth()->user()->name)->count()),
         ];
     }
 }

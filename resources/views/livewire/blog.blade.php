@@ -29,87 +29,31 @@ Our Blog - Christ Preachers Church International
     {{-- Main Content --}}
     <div class="bg-gray-50 px-6 py-16 lg:p-20">
 
-        <div class="flex justify-center">
-            {{-- Left Side --}}
-            <div class="space-y-24">
-                {{-- Blog Posts --}}
-                @forelse ($posts as $post)
-                    <div class="rounded-lg shadow-lg hover:shadow-2xl bg-white max-w-4xl">
-                        <div class="flex justify-center items-center">
-                            <a href="{{ route('blogdetailspage', ['slug' => $post->slug ]) }}">
-                                <img class="rounded-t-lg" src="{{ asset("storage/$post->post_pic") }}" alt="{{ $post->title }}" />
-                            </a>
-                        </div>
-                        <div class="p-6">
-                            <h5 class="text-gray-900 text-xl font-medium mb-2">{{ $post->title }}</h5>
-                            <p class="text-gray-500 text-base font-light mb-4">
-                                {{ $post->summary }}
-                                {{-- {!! substr($post->body, 0, 200) . "..." !!} --}}
-                            </p>
-                            <a href="{{ route('blogdetailspage', ['slug' => $post->slug ]) }}"
-                                class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</a>
-                        </div>
+        <div class="flex flex-col items-center space-y-24">
+            {{-- Blog Posts --}}
+            @forelse ($posts as $post)
+                <div class="rounded-lg shadow-lg hover:shadow-2xl bg-white w-full max-w-4xl">
+                    <div class="flex justify-center items-center">
+                        <a href="{{ route('blogdetailspage', ['slug' => $post->slug ]) }}">
+                            <img class="w-full rounded-t-lg" src="{{ asset("storage/$post->post_pic") }}" alt="{{ $post->title }}" />
+                        </a>
                     </div>
-                    
-                    
-                @empty
-                    <h1 class="text-gray-800">Ooops! Sorry, No blog posts yet. Please check back soon.</h1>
-                @endforelse        
-            </div>
+                    <div class="p-6">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">{{ $post->title }}</h5>
+                        <p class="text-gray-500 text-base font-light mb-4">
+                            {{ $post->summary }}
+                            {{-- {!! substr($post->body, 0, 200) . "..." !!} --}}
+                        </p>
+                        <a href="{{ route('blogdetailspage', ['slug' => $post->slug ]) }}"
+                            class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</a>
+                    </div>
+                </div>
+                
+                
+            @empty
+                <h1 class="text-gray-800">Ooops! Sorry, No blog posts yet. Please check back soon.</h1>
+            @endforelse        
         </div>
-
-        {{-- Right Side --}}
-        {{-- <div>
-            <div class="block rounded-lg shadow-lg bg-white max-w-sm mb-12">
-                <div class="py-3 px-6 border-b border-gray-100 bg-gray-100">
-                    Search
-                </div>
-                <div class="p-6">
-                    <div  class="flex justify-center items-center">
-                        <input type="text"
-                            class="form-control w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-l transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-main focus:outline-none"
-                            id="search" placeholder="Enter search term..." />
-                        <button type="button"
-                            class="rounded-r bg-main text-white flex justify-center items-center leading-normal uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-9 h-9">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="block rounded-lg shadow-lg bg-white max-w-sm mb-12">
-                <div class="py-3 px-6 border-b border-gray-100 bg-gray-100">
-                    Categories
-                </div>
-                <div class="p-6">
-                    <div class="bg-white rounded-lg border border-gray-200 w-full text-gray-900">
-                        <a href="#!" aria-current="true"
-                            class="block px-6 py-2 border-b border-gray-200 w-full rounded-t-lg bg-main text-white cursor-pointer">
-                            All
-                        </a>
-
-                        <a href="#!"
-                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0 focus:bg-gray-200 focus:text-gray-600 transition duration-500 cursor-pointer">
-                            Music
-                        </a>
-
-                        <a href="#!"
-                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0 focus:bg-gray-200 focus:text-gray-600 transition duration-500 cursor-pointer">
-                            Culture
-                        </a>
-
-                        <a href="#!"
-                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0 focus:bg-gray-200 focus:text-gray-600 transition duration-500 cursor-pointer">
-                            Videos
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
 
         <div class="mt-24 space-x-10 flex justify-center items-center">
             {{ $posts->links() }}

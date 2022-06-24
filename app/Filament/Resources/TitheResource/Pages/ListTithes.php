@@ -14,7 +14,15 @@ class ListTithes extends ListRecords
 
     protected function getTableQuery(): Builder
     {
-        return Tithe::query()->orderBy('created_at', 'desc');
+        if (auth()->user()->isAdmin())
+        {
+            return Tithe::query()
+                        ->orderBy('created_at', 'desc');
+        }
+
+        return Tithe::query()
+                    ->where('name', auth()->user()->name)
+                    ->orderBy('created_at', 'desc');
     }
 
     protected function getHeaderWidgets(): array

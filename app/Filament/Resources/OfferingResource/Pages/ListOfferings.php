@@ -14,7 +14,15 @@ class ListOfferings extends ListRecords
 
     protected function getTableQuery(): Builder
     {
-        return Offering::query()->orderBy('created_at', 'desc');
+        if (auth()->user()->isAdmin())
+        {
+            return Offering::query()
+                            ->orderBy('created_at', 'desc');
+        }
+
+        return Offering::query()
+                        ->where('name', auth()->user()->name)
+                        ->orderBy('created_at', 'desc');
     }
 
     protected function getHeaderWidgets(): array

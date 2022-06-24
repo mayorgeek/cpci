@@ -27,12 +27,12 @@ Events - Christ Preachers Church International
 
 
     {{-- Main Content --}}
-    <div class="bg-gray-50 px-6 lg:p-20 py-10 flex flex-col items-center space-y-24">
-        <div>
+    <div class="bg-gray-50 px-6 lg:p-20 py-10">
+        <div class="flex flex-col items-center space-y-24">
             @forelse ($events as $event)
-                <div class="rounded-lg shadow-lg hover:shadow-2xl bg-white max-w-4xl">
+                <div class="rounded-lg shadow-lg hover:shadow-2xl bg-white w-full max-w-4xl">
                     <a href="{{ route('eventdetailspage', ['slug' => $event->slug]) }}">
-                        <img class="rounded-t-lg" src="{{ asset("storage/$event->event_pic") }}" alt="{{ $event->title }}" />
+                        <img class="w-full rounded-t-lg" src="{{ asset("storage/$event->event_pic") }}" alt="{{ $event->title }}" />
                     </a>
                     <div class="p-6">
                         <span class="flex space-x-2 mb-2">

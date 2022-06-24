@@ -29,6 +29,12 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
+
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return !(Auth::user()->isMember());
+    }
+
     public static function form(Form $form): Form
     {
         return $form

@@ -33,7 +33,7 @@
         </div>
 
         <div class="mt-12">
-            <img class="rounded-md" src="{{ asset("storage/$post->post_pic") }}" alt="{{ $post->title }}">
+            <img class="w-full rounded-md" src="{{ asset("storage/$post->post_pic") }}" alt="{{ $post->title }}">
         </div>
 
         {{-- Main Blog Post Content --}}
@@ -50,7 +50,7 @@
                 <form wire:submit.prevent="postComment">
                     {{ $this->form }}
 
-                    <button wire:click='postComment' type="button" class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Submit</button>
+                    <button type="submit" class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Submit</button>
                 </form>
             </div>
 

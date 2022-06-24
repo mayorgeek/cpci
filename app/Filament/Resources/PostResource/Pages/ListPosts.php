@@ -21,7 +21,14 @@ class ListPosts extends ListRecords
 
     protected function getTableQuery(): Builder
     {
-        return Post::query()->orderBy('created_at', 'desc');
+        if (auth()->user()->isAdmin())
+        {
+            return Post::query()->orderBy('created_at', 'desc');    
+        }
+
+        return Post::query()
+                        ->where('posted_by', auth()->user()->name)
+                        ->orderBy('created_at', 'desc');
     }
 
 }

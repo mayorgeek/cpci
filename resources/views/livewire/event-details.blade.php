@@ -25,7 +25,7 @@
             </span>    
         </div>        
 
-        <div class="mt-12 mb-16">
+        <div class="mt-12 mb-24 lg:mb-36">
             <img class="rounded-md w-full" src="{{ asset("storage/$event->event_pic") }}" alt="{{ $event->title }}">
         </div>
         

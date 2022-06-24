@@ -14,6 +14,13 @@ class CreateEvent extends CreateRecord
     protected function mutateFormDataBeforeCreate(array $data): array
     {
         $data['uploaded_by'] = auth()->user()->name;
+
+        $eventLink = $data['event_link'];
+
+        if (!(str_contains($eventLink, "embed")))
+        {
+            $data['event_link'] = substr($eventLink, 0, 8) . "youtube.com/embed" . substr($eventLink, -12, strlen($eventLink));
+        }
     
         return $data;
     }

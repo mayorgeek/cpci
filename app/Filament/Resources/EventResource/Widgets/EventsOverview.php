@@ -10,8 +10,15 @@ class EventsOverview extends BaseWidget
 {
     protected function getCards(): array
     {
+        if (auth()->user()->isAdmin())
+        {
+            return [
+                Card::make('Events', Event::count()),
+            ];
+        }
+
         return [
-            Card::make('Events', Event::count()),
+            Card::make('Events', Event::where('uploaded_by', auth()->user()->name)->count()),
         ];
     }
 }

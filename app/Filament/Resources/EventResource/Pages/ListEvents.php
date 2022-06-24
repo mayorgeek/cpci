@@ -21,7 +21,15 @@ class ListEvents extends ListRecords
 
     protected function getTableQuery(): Builder
     {
-        return Event::query()->orderBy('created_at', 'desc');
+        if (auth()->user()->isAdmin())
+        {
+            return Event::query()
+                        ->orderBy('created_at', 'desc');    
+        }
+
+        return Event::query()
+                    ->where('uploaded_by', auth()->user()->name)
+                    ->orderBy('created_at', 'desc');
     }
 
 }

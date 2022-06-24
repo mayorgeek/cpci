@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
                 'app logs',
             ]);
             Filament::registerUserMenuItems([
-                'account' => UserMenuItem::make()->url(route('filament.resources.users.edit', ["record" => Auth::id() ?? 1])),
+                'account' => UserMenuItem::make()->url(route('filament.resources.users.view', ["record" => Auth::id() ?? 1])),
                 // ...
             ]);
         });
