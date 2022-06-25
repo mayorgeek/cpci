@@ -6,7 +6,6 @@ use App\Http\Livewire\EventDetails;
 use App\Http\Livewire\Events;
 use App\Http\Livewire\GivingPage;
 use App\Http\Livewire\OfferingPage;
-use App\Http\Livewire\RegisterPage;
 use App\Http\Livewire\TithePage;
 use Illuminate\Support\Facades\Route;
 
@@ -43,9 +42,10 @@ Route::get('/get-involved', function () {
 
 Route::get('/register-page', function () {
     return view('register-page');
-})->name('registerpage');
+})
+->name('registerpage')
+->middleware('guest');
 
-// Route::get('/register-page', RegisterPage::class)->name('registerpage');
 
 Route::get('/blog', Blog::class)->name('blogpage');
 Route::get('/blog/{slug}', BlogDetails::class)->name('blogdetailspage');

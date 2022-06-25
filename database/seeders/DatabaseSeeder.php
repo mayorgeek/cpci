@@ -6,6 +6,7 @@ use App\Models\Branch;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,18 +24,18 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // User::create([
-        //     'name' => "Admin",
-        //     'email' => "admin@cpci.com",
-        //     'password' => "admin",
-        //     'gender' => "male",
-        //     'birthday' => "1967-01-01 00:00:00",
-        //     'phone' => "1234567890",
-        //     'address' => "christ preachers church international street",
-        //     'branch' => "accra",
-        //     'fellowship' => "men",
-        //     'role' => "admin",
-        // ]);
+        User::create([
+            'name' => "Admin",
+            'email' => "admin@cpci.com",
+            'password' => Hash::make("admin"),
+            'gender' => "male",
+            'birthday' => "1967-01-01 00:00:00",
+            'phone' => "1234567890",
+            'address' => "christ preachers church international street",
+            'branch' => "accra",
+            'fellowship' => "men",
+            'role' => "admin",
+        ]);
 
         Branch::create([
             'name' => 'accra',

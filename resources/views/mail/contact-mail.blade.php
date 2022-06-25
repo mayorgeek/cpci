@@ -1,11 +1,10 @@
 @component('mail::message')
-# Introduction
+# Contact Mail
 
-The body of your message.
+Firstname: {{ $firstname }}
+Lastname: {{ $lastname }}
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+{{ $message }}
 
 Thanks,<br>
 {{ config('app.name') }}

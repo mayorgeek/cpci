@@ -43,38 +43,36 @@
 
         {{-- Comments Section --}}
         <div>
-            <h2 class="text-gray-900 text-xl mb-6">Leave a comment</h2>
+            @auth
+                <h2 class="text-gray-900 text-xl mb-6">Leave a comment</h2>
 
-            {{-- Comment Box --}}
-            <div class="mb-8 w-full">
-                <form wire:submit.prevent="postComment">
-                    {{ $this->form }}
+                {{-- Comment Box --}}
+                <div class="mb-8 w-full">
+                    @livewire('comment-box', ['post' => $post])
+                </div>
+            @endauth
 
-                    <button type="submit" class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Submit</button>
-                </form>
-            </div>
+            @guest
+                <h2 class="text-gray-700 text-lg mb-6">Login or register to post a comment.</h2>
+            @endguest
 
             {{-- Comments --}}
-            <div>
-                <div class="space-y-4 shadow-lg rounded-md p-6">
-                    <div class="flex justify-start items-center">
-                        <img
-                            style="max-width: 50px;"
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            class="rounded-full"
-                            alt="Avatar"
-                        />
-                        <h2 class="text-gray-800 font-medium text-lg ml-4">Commenter Name</h2>
+            <div class="space-y-10">
+                @forelse ($post->comments->sortDesc() as $comment)
+                    <div class="bg-gray-50 space-y-4 shadow-lg rounded-md p-6">
+                        <h2 class="text-gray-800 font-medium text-lg ml-4">{{ $comment->username }}</h2>
+
+                        <p class="text-gray-500 text-sm">
+                            {{ $comment->created_at->diffForHumans() }}
+                        </p>
+
+                        <p class="text-gray-700 font-light text-base">
+                            {{ $comment->body }}
+                        </p>
                     </div>
-
-                    <p class="text-gray-500 text-sm">
-                        June 7, 2022 at 11:22 am
-                    </p>
-
-                    <p class="text-gray-700 font-light text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit tempora deleniti quod est, rerum recusandae magni non vitae ex deserunt sint quisquam, officiis sequi dolores nulla eius provident tempore et. Consectetur, distinctio recusandae perspiciatis libero beatae officia fugit quas nulla earum quo ea eum assumenda molestias voluptate error accusantium repellendus?
-                    </p>
-                </div>
+                @empty
+                    <h1 class="text-gray-800 text-lg font-normal">No comments!</h1>   
+                @endforelse
             </div>
 
         </div>
