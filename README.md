@@ -8,7 +8,7 @@ Developed by Aiotouch Softwares
 
 Run
 ```
-git clone https://github.com/mayorgeek/cpci.git <br>
+git clone https://github.com/mayorgeek/cpci.git 
 ```
 
 Run <br>
