@@ -90,6 +90,12 @@
             </div>
           </li>
 
+          @auth
+            <li>
+              <a class="inline-block px-6 py-2 border-2 border-main text-main font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" href="{{ route('filament.pages.dashboard') }}">Dashboard</a>
+            </li>
+          @endauth
+
           @guest
             <a href="{{ route('registerpage') }}" class="px-6 py-2.5 bg-gray-100 text-main font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 active:shadow-lg transition duration-150 ease-in-out">Register</a>
             <a href="{{ route('filament.auth.login') }}" class="px-6 py-2.5 bg-main text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-main active:shadow-lg transition duration-150 ease-in-out">Login</a>            
