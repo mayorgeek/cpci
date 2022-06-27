@@ -94,8 +94,12 @@
                     @enderror"
                     aria-label="Select Your Church Branch">
                     <option selected>Select Your Branch</option>
-                    <option value="accra">Accra</option>
-                    <option value="kumasi">Kumasi</option>
+                    @forelse ($branches as $branch)
+                        <option value="{{ $branch }}">{{ ucwords($branch) }}</option>
+                    @empty
+                        <option value="accra">Accra</option>
+                        <option value="kumasi">Kumasi</option>    
+                    @endforelse
                 </select>
             </div>
 

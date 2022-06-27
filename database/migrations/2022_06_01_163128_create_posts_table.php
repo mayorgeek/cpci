@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('post_pic')->nullable();
             $table->string('slug');
+            $table->string('tags');
             $table->string('title');
             $table->text('body');
             $table->string('summary');

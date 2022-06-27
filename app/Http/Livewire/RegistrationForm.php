@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Branch;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
@@ -20,6 +21,13 @@ class RegistrationForm extends Component
     public $role;
     public $password;
     public $password_confirmation;
+
+    public $branches;
+
+    public function mount(): void
+    {
+        $this->branches = Branch::query()->pluck('name');
+    }
 
     public function render()
     {

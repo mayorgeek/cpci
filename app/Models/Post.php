@@ -13,6 +13,10 @@ class Post extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'tags' => 'array',
+    ];
+
     public function comments(): HasMany {
         return $this->hasMany(Comment::class);
     }

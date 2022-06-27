@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ env('APP_NAME') }}" />
+    <meta property="og:locale" content="en_GH" />
+    <meta name="theme-color" content="#0044F2" />
+
+    @yield('meta-tags')
+
     <title>@yield('title', 'Christ Preachers Church International')</title>
 
     {{-- Poppins Google Fonts --}}

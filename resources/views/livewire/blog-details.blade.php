@@ -1,5 +1,17 @@
 @extends('layouts.app')
 
+@section('meta-tags')
+    <meta name="description" content="{{ $post->summary }}" />
+    <meta property="og:title" content="{{ $post->title }}" />
+    <meta property="og:description" content="{{ $post->summary }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta name="twitter:card" content="{{ asset("storage/$post->post_pic") }}" />
+    <meta name="twitter:title" content="{{ $post->title }}" />
+    <meta name="twitter:description" content="{{ $post->summary }}" />
+    <meta name="twitter:image" content="{{ asset("storage/$post->post_pic") }}" />
+    <meta name="keywords" content="{{ $post->tags }}" />
+@endsection
+
 @section('title')
 {{ $post->title }} - Christ Preachers Church International
 @endsection

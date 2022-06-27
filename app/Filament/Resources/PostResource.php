@@ -41,6 +41,8 @@ class PostResource extends Resource
                     Forms\Components\TextInput::make('slug')
                         ->required()
                         ->maxLength(255),
+                    Forms\Components\TagsInput::make('tags')
+                        ->separator(','),
                     Forms\Components\Textarea::make('summary')
                         ->required()
                         ->maxLength(200)
