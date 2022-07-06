@@ -26,6 +26,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+	    if (config('app.env') === 'production') {
+ 		   \URL::forceScheme('https');
+		}
+
         Filament::serving(function () {
             Filament::registerTheme(mix('css/filament.css'));
             Filament::registerNavigationGroups([
