@@ -5,6 +5,7 @@ namespace App\Providers;
 use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Auth;
 use Filament\Navigation\UserMenuItem;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -30,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
  		   \URL::forceScheme('https');
 	    }
 
+        Schema::defaultStringLength(191);
 
         Filament::serving(function () {
             Filament::registerTheme(mix('css/filament.css'));
