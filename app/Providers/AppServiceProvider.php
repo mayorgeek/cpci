@@ -28,7 +28,9 @@ class AppServiceProvider extends ServiceProvider
     {
 	    if (config('app.env') === 'production') {
  		   \URL::forceScheme('https');
-		}
+	    }
+
+	    Schema::defaultStringLength(191);
 
         Filament::serving(function () {
             Filament::registerTheme(mix('css/filament.css'));
