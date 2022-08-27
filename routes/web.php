@@ -7,6 +7,10 @@ use App\Http\Livewire\Events;
 use App\Http\Livewire\GivingPage;
 use App\Http\Livewire\OfferingPage;
 use App\Http\Livewire\TithePage;
+use App\Models\UserLog;
+use Carbon\Carbon;
+use Filament\Facades\Filament;
+use Filament\Http\Responses\Auth\Contracts\LogoutResponse;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,3 +60,19 @@ Route::get('/event/{slug}', EventDetails::class)->name('eventdetailspage');
 Route::get('/giving', GivingPage::class)->name('givingpage');
 Route::get('/offering', OfferingPage::class)->name('offeringpage');
 Route::get('/tithe', TithePage::class)->name('tithespage');
+
+
+// Custom logout route
+Route::post('/cpanel/logout', function (): LogoutResponse {
+    UserLog::create([
+        'username' => auth()->user()->name,
+        'logout_date' => Carbon::now()
+    ]);
+
+    Filament::auth()->logout();
+
+    session()->invalidate();
+    session()->regenerateToken();
+
+    return app(LogoutResponse::class);
+})->name('cpanel.auth.logout');

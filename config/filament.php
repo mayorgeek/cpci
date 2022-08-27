@@ -9,6 +9,7 @@ use App\Filament\Resources\OfferingResource\Widgets\OfferingChart;
 use App\Filament\Resources\PostResource\Widgets\PostsOverview;
 use App\Filament\Resources\TitheResource\Widgets\TitheChart;
 use App\Filament\Resources\UserResource\Widgets\UsersOverview;
+use App\Http\Livewire\Login;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
@@ -99,7 +100,8 @@ return [
     'auth' => [
         'guard' => env('FILAMENT_AUTH_GUARD', 'web'),
         'pages' => [
-            'login' => \Filament\Http\Livewire\Auth\Login::class,
+            // 'login' => \Filament\Http\Livewire\Auth\Login::class,
+            'login' => Login::class,
         ],
     ],
 
@@ -310,3 +312,4 @@ return [
     ],
 
 ];
+
