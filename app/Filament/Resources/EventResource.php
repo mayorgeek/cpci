@@ -27,6 +27,7 @@ class EventResource extends Resource
                 Card::make([
                     Forms\Components\FileUpload::make('event_pic')
                         ->image()
+                        ->disk('s3')
                         ->columnSpan('full')
                         ->directory('events/event-pics'),
                     Forms\Components\TextInput::make('title')

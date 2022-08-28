@@ -42,6 +42,7 @@ class UserResource extends Resource
                 Card::make([
                     FileUpload::make('profile_pic')
                         ->image()
+                        ->disk('s3')
                         ->avatar()
                         ->directory('user-profile-pics'),
                     TextInput::make('name'),
