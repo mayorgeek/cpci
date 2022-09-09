@@ -31,7 +31,6 @@ class PostResource extends Resource
                 ->schema([
                     Forms\Components\FileUpload::make('post_pic')
                         ->image()
-                        ->disk('s3')
                         ->directory('blog/post-pics')
                         ->maxSize(5120),
                     Forms\Components\TextInput::make('title')
